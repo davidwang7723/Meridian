@@ -902,3 +902,7 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Choosing the two themes by sight.** With two themes switched by Display Mode, each half of the day, Bright hours and Onyx hours, is now a row of small pictures of every theme, the chosen one ringed and named, instead of a pop-up menu of names.
 
 **The menu bar is Meridian's mark.** It is always the icon now; a click opens the card with the session, what is next and the rest. The setting that wrote all of that out across the menu bar is gone.
+
+## v1.60.5
+
+**A video wallpaper costs far less.** Meridian sat at around 6 on Activity Monitor's energy impact with a video background. The film was muted, but its sound was still decoded and played into silence, with audio threads waking the Mac about ten times a second, and the film kept playing in the app's own window even while that window was hidden, so it was often being decoded twice. The wallpaper now plays only the film's picture, pauses whenever it cannot be seen (covered by windows, on another desktop, behind the lock screen or with the display asleep), and loops without seeking back. Measured with the desktop showing: 1.45, down from 2 just after launch and 6 after a while; under 1 with the desktop covered.

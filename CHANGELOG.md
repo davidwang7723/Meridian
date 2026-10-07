@@ -892,3 +892,7 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 ## v1.60.2
 
 **General comes first.** It sits at the top of Settings, above Appearance, since it holds Updates and the language.
+
+## v1.60.3
+
+**Updates finish on their own.** The first update sat at Installing for good: the old copy was asked to quit from inside a step that its own quitting had to wait for, so it waited forever. The new version is now opened straight away and told it is the update; it asks the old copy to quit, ends it if it is still there a few seconds later, and carries on. The old copy's own quit no longer waits on itself either.

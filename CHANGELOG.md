@@ -37,7 +37,7 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
   - *Pomodoro* (small) — live countdown ring with WORK/BREAK label, task name, and cycle progress; uses `Text(timerInterval:)` for a smooth per-second countdown without forcing per-second timeline reloads.
   - *Current Session* (medium) — the active schedule block ("NOW") with time range and "ends in" countdown, plus a "NEXT UP" preview of the next block.
   - *Homework & Reminders* (large) — pending reminders and assignments sorted by date, with overdue items called out in red with an "OVERDUE" badge.
-- **App Group snapshot pipeline** — the main app writes a `widget_snapshot.json` to the shared App Group container every second; the widget extension reads it via `WidgetSnapshotStore` and reloads its timeline at meaningful boundaries (pomodoro segment end, block end, next block start) instead of on a fixed interval.
+- **App Group snapshot pipeline** — the main app writes a `widget_snapshot.json` to the shared `group.com.david.meridian` container every second; the widget extension reads it via `WidgetSnapshotStore` and reloads its timeline at meaningful boundaries (pomodoro segment end, block end, next block start) instead of on a fixed interval.
 - **Widget build pipeline fixed** — `build.sh` now compiles the widget extension with `-Xlinker -e -Xlinker _NSExtensionMain` so the appex boots through Foundation's `NSExtensionMain` entry point. Without this, the system registered the widget but every chronod spawn crashed with `ExtensionFoundation` "Unrecognized extension type", so the widgets never showed up in the gallery despite the build technically succeeding.
 - **Accordion title bar** — the standard macOS title bar is replaced with a custom pop-out strip. In windowed mode the title bar is hidden entirely; hovering within 24pt of the top edge causes the window to grow upward by 28pt, revealing a Liquid Glass (`NSVisualEffectView`, `.titlebar` material) strip with the real traffic-light buttons. Moving the cursor away collapses it. Content never shifts — the SwiftUI host is pinned to a fixed baseline inside a `TitleBarContainer` so only the top edge of the window moves. In full-screen mode, standard macOS auto-hiding chrome is restored (traffic lights appear on cursor-to-ceiling as normal).
 
@@ -828,3 +828,49 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **No more overlapping sessions.** The editor used for letter days, day templates, week templates, Create a Day, Plan Your Week and the calendar import let a session be saved over others on the same day. It now refuses, the same as the calendar does. Creating a day onto dates skips sessions that would land on something already there, the night check-in will not copy a session onto a time already taken tomorrow, and the task planner no longer treats a session running past midnight as taking no time.
 
 **An end time before the start means the afternoon.** The end time's AM/PM switch starts on AM, so a session from 11:40 AM typed to end at 12:25 was saved ending just after midnight. It spilled onto the next day as a block at 12:00 AM. An AM end at or before the start now reads as PM when that makes a session under twelve hours long; a real overnight one, 10 PM to 7 AM, still reads as one.
+
+## v1.58.0
+
+**Time boxes take digits and nothing else.** Every hour and minute box in the app, and the boxes a length of time is typed into, lights its outline instead of showing a blinking caret, takes only digits, and pushes each new digit in from the right. Leaving an hour box at 19 makes it 7 PM, and ":" jumps to the minutes. Return saves in the session sheet, Settings times, the task planner, the task sheet and look ats. They are all the session sheet's size now, and grow and shrink with the Font Size slider.
+
+**Clicking away ends typing.** A click on a button or on empty space leaves the text box being typed into. The caret in a text box holds steady rather than fading in and out, which kept the window redrawing for as long as a box had the keyboard. The Pomodoro task box no longer redraws the whole app on every keystroke.
+
+**A long paste into Sol's chat stays quick.** The chat box re-copied and laid out all of its text on every keystroke: with 150 KB in it, the paste took a fifth of a second and every key after it more than a tenth. It is a native text box now, about 9 ms for the same paste and 6 ms a key.
+
+**The screen saver shows the wallpaper of the desktop you were on.** Each desktop can have a wallpaper of its own, and the saver used to guess which one was showing by when each was last used, which picked the wrong one and then had no picture to show. It now asks macOS which desktop is in front and looks again the moment you switch. It shows the same still picture as the desktop instead of playing the wallpaper's video, which faded from one picture to another and flew across the landscape before it settled. Macintosh and the other wallpapers macOS draws live get a picture Meridian takes itself, which needs Screen & System Audio Recording. With nothing to show, the saver paints Meridian's colour rather than black.
+
+**A cleaner screen saver.** It comes up from black in one fade, without the grey frames that showed round the Macintosh wallpaper's moving pieces. The shadows under the clock group are measured where that group stands, so a plain sky no longer gets a dark cloud. The framed style reaches over macOS's date, and the page is laid out again when a display is plugged in or its resolution changes.
+
+**The weather, smaller in the app and under your files on the desktop.** On the home page it is one line in the corner, with the rest in its help tag. On the desktop it sits under Finder's icons; hold Command over it to drag it somewhere else.
+
+**The framed clock holds all of its text.** A long session name under the clock ran past the frame's edge. The frame is now sized round everything in it, with the same margin on every side.
+
+**Commands from anywhere, run in Sol's chat.** The copy button puts every command Meridian understands on the clipboard, with your schedule's ids, for pasting into another AI. JSON commands typed or pasted into the chat run straight away without going to Sol, and the braces button switches the box to JSON or opens a .json file. A file can also be dropped on the chat bar. Deletes and edits still wait for a Yes.
+
+**Sol's instructions are half as long.** Sol gets the rules, lookups and calendar sessions every time, and asks for the instructions for anything else, reminders, rotations, tasks and the rest, when it needs them. A command written without its instructions does not run; the app hands them over and Sol writes it again. Sol's view of the schedule is the short summary for every provider, with the rest looked up when asked.
+
+**Ollama on a Mac with less memory gets the whole of Sol's instructions.** Ollama sizes its memory for a conversation by the Mac's memory, 4,000 tokens on a Mac with 16 GB or less, and cut the start off anything longer without a word. That is where Sol's commands were listed, so Sol said there was no command for a letter rotation. Meridian now asks Ollama for enough room itself.
+
+**First-run setup.** The Permissions page asks for Screen & System Audio Recording, scrolls when the list outgrows the card, and keeps the permission being asked in view. Skip is gone: Continue moves on from any page, done or not, and leaving the Permissions page stops the questions rather than letting them pop up later.
+
+## v1.58.1
+
+**Meridian never offers itself for the Trash.** On launch Meridian looks for other copies of itself, which can end up owning the widget and the notifications, and offers to put them in the Trash. It knew the copy it was running from only when macOS listed the very same path, and the same folder can come back under another name: through the system's data volume, a symlink, or the temporary place macOS runs a freshly downloaded app from. It was then offered as another copy, and because nothing else was running from it, nothing was asked to quit first, so Move to Trash put the copy in use in the Trash. A copy is now matched by the folder itself on disk, nothing is offered while macOS runs Meridian from that temporary place, a copy on a disk image or a path that is gone is left out, and the Trash button checks once more before it moves anything.
+
+## v1.59.0
+
+**A night review of the day ahead.** Once a night, at 3 AM unless you pick another time in Settings, AI, Night review, Sol looks over the coming day and leaves a few suggestions waiting for the morning: a run moved out of the rain, nothing demanding straight after sport, no gym in the hour after lunch. They come as Meridian's own banners, stay until you close them, and the ones that change something have an Apply button. A school day is mostly set by other people, so its classes are never touched and it gets one suggestion at most; a day you planned yourself gets up to three. The wake helper wakes the Mac for it and keeps it awake for a few minutes with the screen off, opening Meridian if it is quit. If the Mac slept through anyway, the review runs the next time it wakes. Review now runs it on the spot.
+
+**Sol remembers.** Sol's instructions are laid out so a local model reads them once: the rules and every command first, the records next, and the time, weather and what is on now at the start of your message. A local model rereads a prompt only from its first change, so after the first message Sol starts answering in a tenth of a second instead of seven. Every command goes every time now, with no asking for instructions first. Each chat keeps one context size, since a new size reloads the model. Looked-up rows leave the conversation once answered, a long chat folds its older part into a summary, and Sol keeps short notes about you between chats, listed in Settings, AI, Sol's memory, where any can be deleted. Sol can read earlier chats too, found by meaning with Ollama's nomic-embed-text when it is installed. The chat panel hands a local model the instructions as it opens, so the first message does not wait for them.
+
+**Sol answers what was asked.** "Hi" gets a greeting back, not the whole day, and a message Sol does not understand gets a question rather than your settings. Homework questions are answered from your look ats and tasks. A reply that says it added or moved something but carried no command to do it is caught, and Sol is asked for the command at once, where before nothing happened and nothing said so. Lines of Sol's own instructions copied into a reply are taken out.
+
+**Thinking on or off.** The brain button in Sol's header turns thinking down wherever the provider allows it, for much faster answers: gpt-oss went from 38 seconds to under half a second on a simple question. It starts off. Models that cannot think, or only think, do not show it.
+
+**Smoother chat while Sol writes.** The transcript scrolls in the same moment the reply grows, so it no longer flashes up and down. Scroll up to read and it stays put; scroll back to the end and it follows again.
+
+**No emoji in Meridian's own words.** Sol's results, buttons, the menu bar, the widget and the break check-in moods use symbols now. What you type keeps whatever emoji you put in it.
+
+**The Sol window.** It moves from a drag near its top edge, where the resize strip used to take the first ten points, and a drag from another app moves it on the first try.
+
+**Today's check-in no longer moves the clock.** The button sits above the clock instead of pushing it down.

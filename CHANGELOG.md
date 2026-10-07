@@ -888,5 +888,3 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 ## v1.60.1
 
 **Updates in Settings.** Settings, General has an Updates box: the version you have, Check for Updates, and Download and Install when there is a newer one, with its progress.
-
-**General comes first.** It sits at the top of Settings, above Appearance, since it holds Updates and the language.

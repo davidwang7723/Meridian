@@ -878,3 +878,9 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 ## v1.59.1
 
 **Opening today's check-in from either place clears both.** The home page's check-in button and the banner ten minutes before bed both open the same check-in, but only the banner marked it as begun. Going in from the home page left the banner up, still offering a check-in that was already open. Now opening it from either one takes the home button away and closes the banner.
+
+## v1.60.0
+
+**Meridian updates itself.** Every version is published on GitHub, and Meridian now looks there once a day. When there is a newer one, a banner says so and stays until you close it, and an Update button waits above the clock on the home page until you install it or put it away with its x. Update downloads the new version, checks it is signed by Meridian's own team, moves the old copy to the Trash and opens the new one, with no Open Anyway to go through. Meridian, Check for Updates looks right away.
+
+**The wake helper moves over by itself.** After an update the background helper that wakes the Mac for alarms kept running the old version from the Trash. The first launch of a new version now empties its list, lets it go, and hands the list back, which starts it again from the new copy.

@@ -874,3 +874,7 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **The Sol window.** It moves from a drag near its top edge, where the resize strip used to take the first ten points, and a drag from another app moves it on the first try.
 
 **Today's check-in no longer moves the clock.** The button sits above the clock instead of pushing it down.
+
+## v1.59.1
+
+**Opening today's check-in from either place clears both.** The home page's check-in button and the banner ten minutes before bed both open the same check-in, but only the banner marked it as begun. Going in from the home page left the banner up, still offering a check-in that was already open. Now opening it from either one takes the home button away and closes the banner.

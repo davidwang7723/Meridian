@@ -896,3 +896,9 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 ## v1.60.3
 
 **Updates finish on their own.** The first update sat at Installing for good: the old copy was asked to quit from inside a step that its own quitting had to wait for, so it waited forever. The new version is now opened straight away and told it is the update; it asks the old copy to quit, ends it if it is still there a few seconds later, and carries on. The old copy's own quit no longer waits on itself either.
+
+## v1.60.4
+
+**Choosing the two themes by sight.** With two themes switched by Display Mode, each half of the day, Bright hours and Onyx hours, is now a row of small pictures of every theme, the chosen one ringed and named, instead of a pop-up menu of names.
+
+**The menu bar is Meridian's mark.** It is always the icon now; a click opens the card with the session, what is next and the rest. The setting that wrote all of that out across the menu bar is gone.

@@ -914,3 +914,7 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Voice mode no longer holds gigabytes of memory.** MLX keeps every graphics buffer it has used for reuse, with no limit, and long sentences use big ones: after a few answers Meridian held 8.6 GB. The reuse pool is now capped and emptied after each sentence, and the voice itself is let go after five minutes of silence and loaded again, in about a second, the next time Sol speaks. After five long answers Meridian now holds about 440 MB.
 
 **The voice window moves.** It is dragged by any part of the card that is not a control, from behind another app's window on the first try. It only claimed to be movable by its background, and SwiftUI draws all of it.
+
+## v1.60.7
+
+**Times can be typed again in every create sheet.** Clicking a time box in New Block, a reminder, a task or any other sheet lit it for a moment and then took no digits. Each sheet stops typing when its page is clicked, and a click on a box counted as one: the box took the keyboard as the button went down and the page took it away again as it came up. A box now keeps its own click.

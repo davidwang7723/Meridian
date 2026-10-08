@@ -918,3 +918,19 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 ## v1.60.7
 
 **Times can be typed again in every create sheet.** Clicking a time box in New Block, a reminder, a task or any other sheet lit it for a moment and then took no digits. Each sheet stops typing when its page is clicked, and a click on a box counted as one: the box took the keyboard as the button went down and the page took it away again as it came up. A box now keeps its own click.
+
+## v1.61.0
+
+**Sol changes nothing without your OK.** Looking things up still happens on its own, but every add, edit, delete, timer and setting Sol writes now waits on a card. Typing or saying "yes" or "no" answers it. Sol is told what you chose, so its next answer knows.
+
+**Sol answers what you asked, at the size you asked it.** "Okay" and "thanks" get a few words back instead of a repeat of the last answer. "My first class" is one class, not the whole day. Sol now sees today's and tomorrow's schedules directly instead of guessing from the weekly pattern, "let me know if…" endings are gone, and a guess written alongside a lookup is replaced by the real answer. Spoken times read naturally: 15:00 is "three PM".
+
+**The natural language engine understands far more.** It answers first and last class, when school ends, where and who your next class is, how long something is, time left in this class, "do I have bio today", "is there school tomorrow", letter days, homework and what's due, free time in the morning, afternoon or evening, your next free period, and what's after lunch. It now handles "wake me up at 7", "set an alarm", "skip coding today", "block 3 to 4 for reading", a 50 minute focus session, "pause the timer" and "make the text bigger". Fixed: "when is lunch tomorrow" answered with today's, "15 minutes longer" made things shorter, "push back 30 minutes" cut the end instead of moving it, "7-9pm" started at 7 AM, and "for an hour" ended up in the name.
+
+**Send suggestions.** Settings › General and Help › Send Suggestion… send an idea straight to Meridian's GitHub page, and Sol can send one when asked. Nothing about who sent it goes with it.
+
+**The task timeline has a third column.** Today and tomorrow stay as a timeline, and Later lists every dated task after them, by day.
+
+**Setup has an AI page,** and Settings › General can run setup again.
+
+**Pomodoro:** Export has an upward arrow, and the task and timing boxes have outlines.

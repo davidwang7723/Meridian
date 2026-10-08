@@ -906,3 +906,11 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 ## v1.60.5
 
 **A video wallpaper costs far less.** Meridian sat at around 6 on Activity Monitor's energy impact with a video background. The film was muted, but its sound was still decoded and played into silence, with audio threads waking the Mac about ten times a second, and the film kept playing in the app's own window even while that window was hidden, so it was often being decoded twice. The wallpaper now plays only the film's picture, pauses whenever it cannot be seen (covered by windows, on another desktop, behind the lock screen or with the display asleep), and loops without seeking back. Measured with the desktop showing: 1.45, down from 2 just after launch and 6 after a while; under 1 with the desktop covered.
+
+## v1.60.6
+
+**Sol's voice is a voice again on M5 Macs.** In voice mode Sol played alien noise and a screech instead of speech. Kokoro, the voice, runs on Apple's MLX, and the version Meridian used computes one step of turning speech into sound wrongly on chips with Apple's newer neural accelerators, the M5 among them, once a sentence runs past about twenty words: the first words were fine and the rest turned to noise. Meridian now uses MLX 0.30.6, where Apple fixed it, and long sentences come out clean from start to finish.
+
+**Voice mode no longer holds gigabytes of memory.** MLX keeps every graphics buffer it has used for reuse, with no limit, and long sentences use big ones: after a few answers Meridian held 8.6 GB. The reuse pool is now capped and emptied after each sentence, and the voice itself is let go after five minutes of silence and loaded again, in about a second, the next time Sol speaks. After five long answers Meridian now holds about 440 MB.
+
+**The voice window moves.** It is dragged by any part of the card that is not a control, from behind another app's window on the first try. It only claimed to be movable by its background, and SwiftUI draws all of it.

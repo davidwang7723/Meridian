@@ -934,3 +934,17 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Setup has an AI page,** and Settings › General can run setup again.
 
 **Pomodoro:** Export has an upward arrow, and the task and timing boxes have outlines.
+
+## v1.62.0
+
+**Swipe between days, weeks and months.** Two fingers sideways on the trackpad move Daily, Weekly, Calendar and Reminders to the next or previous page, and Tasks between Look ats and Timeline. The page follows the fingers and nothing is decided until they lift. The page beside it is the real page, slid in like a desktop, and a release lands at the speed it was thrown. A scroll and a swipe are told apart from the fingers themselves: the grid never scrolls during a swipe, and a swipe never starts while a scroll is still gliding. The arrow buttons slide the same way.
+
+**Alarms stay quiet while the Mac sleeps.** With "Notify when Mac is closed" off, a sleeping Mac no longer rings when macOS wakes it for a few seconds of its own upkeep. What came due is shown as a banner when the Mac is woken.
+
+**Less energy.** Letter days, text measurements and fonts are worked out once instead of on every redraw. The wallpaper no longer reads the Mac's wallpaper settings every second. Hovering a block redraws one block, not the week. Interaction costs about a third less.
+
+**Pictures only.** Video wallpapers are gone. A video that was set falls back to the colour.
+
+**Home.** Hovering the current or next session over a picture opens its card in the window too. On the wallpaper, the next session's whole line opens its card, not just its bottom edge. The clock stays put as lines appear under it.
+
+**Schedule.** The weekly sidebar slides in and out whole and smoothly. Each day in it has its own frame, and the mini calendar has even margins. Daily rows lose their small Edit buttons: select a block and Edit is in the bar, or double click it. Deleting a calendar block asks with just Cancel and Delete. The window buttons sit in the same place in all three schedule views, and in the header row in Tasks.

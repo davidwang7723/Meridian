@@ -948,3 +948,15 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Home.** Hovering the current or next session over a picture opens its card in the window too. On the wallpaper, the next session's whole line opens its card, not just its bottom edge. The clock stays put as lines appear under it.
 
 **Schedule.** The weekly sidebar slides in and out whole and smoothly. Each day in it has its own frame, and the mini calendar has even margins. Daily rows lose their small Edit buttons: select a block and Edit is in the bar, or double click it. Deleting a calendar block asks with just Cancel and Delete. The window buttons sit in the same place in all three schedule views, and in the header row in Tasks.
+
+## v1.63.0
+
+**The clock stays in one place.** The main clock sits at the exact middle of the window on Home and of the screen on the wallpaper, the same place in both. Nothing around it moves it: the lines under it, the day's pill, second clocks, the check-in and update buttons, or the top bar coming and going.
+
+**Updates.** Check for Updates no longer shows a banner when it finds one. The Updates box in Settings, General shows the new version and what it brings, with Download and Install under it. Check for Updates in the Meridian menu opens that box. The daily check still shows the banner once per version.
+
+**Sol can update Meridian.** Ask Sol to update and it checks straight away, with no card. A newer version downloads, installs and restarts Meridian with no banner. Otherwise Sol says you are up to date.
+
+**Rotation push and pull.** The first click on a day picks it green and the next picks red, with no card in between. Click green again to take it back. After a push or pull, blocks on those days that are not part of the letter stay where they are.
+
+**Weekly.** A hovered block keeps its colour and its text has no shadow. Notes on blocks are darker and easier to read.

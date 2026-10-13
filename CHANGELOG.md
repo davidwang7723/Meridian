@@ -37,7 +37,7 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
   - *Pomodoro* (small) — live countdown ring with WORK/BREAK label, task name, and cycle progress; uses `Text(timerInterval:)` for a smooth per-second countdown without forcing per-second timeline reloads.
   - *Current Session* (medium) — the active schedule block ("NOW") with time range and "ends in" countdown, plus a "NEXT UP" preview of the next block.
   - *Homework & Reminders* (large) — pending reminders and assignments sorted by date, with overdue items called out in red with an "OVERDUE" badge.
-- **App Group snapshot pipeline** — the main app writes a `widget_snapshot.json` to the shared `group.com.david.meridian` container every second; the widget extension reads it via `WidgetSnapshotStore` and reloads its timeline at meaningful boundaries (pomodoro segment end, block end, next block start) instead of on a fixed interval.
+- **App Group snapshot pipeline** — the main app writes a `widget_snapshot.json` to the shared `the shared app group` container every second; the widget extension reads it via `WidgetSnapshotStore` and reloads its timeline at meaningful boundaries (pomodoro segment end, block end, next block start) instead of on a fixed interval.
 - **Widget build pipeline fixed** — `build.sh` now compiles the widget extension with `-Xlinker -e -Xlinker _NSExtensionMain` so the appex boots through Foundation's `NSExtensionMain` entry point. Without this, the system registered the widget but every chronod spawn crashed with `ExtensionFoundation` "Unrecognized extension type", so the widgets never showed up in the gallery despite the build technically succeeding.
 - **Accordion title bar** — the standard macOS title bar is replaced with a custom pop-out strip. In windowed mode the title bar is hidden entirely; hovering within 24pt of the top edge causes the window to grow upward by 28pt, revealing a Liquid Glass (`NSVisualEffectView`, `.titlebar` material) strip with the real traffic-light buttons. Moving the cursor away collapses it. Content never shifts — the SwiftUI host is pinned to a fixed baseline inside a `TitleBarContainer` so only the top edge of the window moves. In full-screen mode, standard macOS auto-hiding chrome is restored (traffic lights appear on cursor-to-ceiling as normal).
 
@@ -960,3 +960,27 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Rotation push and pull.** The first click on a day picks it green and the next picks red, with no card in between. Click green again to take it back. After a push or pull, blocks on those days that are not part of the letter stay where they are.
 
 **Weekly.** A hovered block keeps its colour and its text has no shadow. Notes on blocks are darker and easier to read.
+
+## v1.64.0
+
+**Hey Sol.** Say "Hey Sol" to open voice mode, or "Hey Sol, what's my next class" to ask straight away. Set it up once in Settings, AI, Voice by saying it four times; it learns your voice. What sounds like it is checked again in words before anything opens, so "he sold" and "hey Siri" do not wake it. It listens on the Mac's own microphone for next to no energy.
+
+**Talk over Sol.** Start talking while Sol is speaking and it pauses at once, shows your words, and stops for good once they are clear. A cough or a noise and it carries on. Sol's own voice is cancelled out of the microphone, through the speakers or in headphones.
+
+**A new English voice.** English is spoken by Pocket TTS, other languages by Kokoro. Pick the voice in Settings, AI, Voice.
+
+**Morning check-in.** Stop the wake-up alarm and Sol reads you your assignments still going, your first class and how many there are today, your latest important emails, this morning's reminders and the news. It is written five minutes before the alarm, so it starts straight away.
+
+**Sol, smarter.** Choose the model for each provider from its own list; the old defaults had been retired. Commands use each provider's own tools, so they come through more reliably. Sol can search the web, read pictures and PDFs you attach or paste, and summarise your latest important emails, read or not. Copy, edit and regenerate sit under the last message. A busy or refused request is tried again by itself. Sol's memory notes are gone.
+
+**Local models, fast.** With Ollama, Sol keeps its reading of the instructions instead of starting over: a message takes about a second on a 7B model instead of four to twenty. The model is let go when the screen sleeps.
+
+**Tasks.** Tasks are ranked by effort, split into sessions over the days before the deadline, and each session gets its own reminder. A short chat with Sol plans them: the deadline, how long it takes and when you are free. Settings, General, Tasks sets which tasks get planned and how early to remind you.
+
+**Reminders.** The Reminders page shows today and tomorrow as a timeline, with everything later in a list.
+
+**Repeating blocks and session templates.** Blocks added on several days, a day template put on several days, or a week template over several weeks are one repeat: edit or delete all of them at once, from the block or its right-click card. Session templates keep a session you add often; pick one and give only its start.
+
+**Settings.** Each page lays its boxes out in columns across the window.
+
+**Energy.** About a point of energy sitting as the wallpaper with Hey Sol listening, down from several. The clock's shadows are drawn around the digits that change rather than the whole clock, the microphone is read in larger pieces, and Meridian no longer wakes for every movement of the mouse in other apps.

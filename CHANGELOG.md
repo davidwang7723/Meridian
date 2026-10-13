@@ -37,7 +37,7 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
   - *Pomodoro* (small) — live countdown ring with WORK/BREAK label, task name, and cycle progress; uses `Text(timerInterval:)` for a smooth per-second countdown without forcing per-second timeline reloads.
   - *Current Session* (medium) — the active schedule block ("NOW") with time range and "ends in" countdown, plus a "NEXT UP" preview of the next block.
   - *Homework & Reminders* (large) — pending reminders and assignments sorted by date, with overdue items called out in red with an "OVERDUE" badge.
-- **App Group snapshot pipeline** — the main app writes a `widget_snapshot.json` to the shared `the shared app group` container every second; the widget extension reads it via `WidgetSnapshotStore` and reloads its timeline at meaningful boundaries (pomodoro segment end, block end, next block start) instead of on a fixed interval.
+- **App Group snapshot pipeline** — the main app writes a `widget_snapshot.json` to the shared `the app group` container every second; the widget extension reads it via `WidgetSnapshotStore` and reloads its timeline at meaningful boundaries (pomodoro segment end, block end, next block start) instead of on a fixed interval.
 - **Widget build pipeline fixed** — `build.sh` now compiles the widget extension with `-Xlinker -e -Xlinker _NSExtensionMain` so the appex boots through Foundation's `NSExtensionMain` entry point. Without this, the system registered the widget but every chronod spawn crashed with `ExtensionFoundation` "Unrecognized extension type", so the widgets never showed up in the gallery despite the build technically succeeding.
 - **Accordion title bar** — the standard macOS title bar is replaced with a custom pop-out strip. In windowed mode the title bar is hidden entirely; hovering within 24pt of the top edge causes the window to grow upward by 28pt, revealing a Liquid Glass (`NSVisualEffectView`, `.titlebar` material) strip with the real traffic-light buttons. Moving the cursor away collapses it. Content never shifts — the SwiftUI host is pinned to a fixed baseline inside a `TitleBarContainer` so only the top edge of the window moves. In full-screen mode, standard macOS auto-hiding chrome is restored (traffic lights appear on cursor-to-ceiling as normal).
 
@@ -984,3 +984,19 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Settings.** Each page lays its boxes out in columns across the window.
 
 **Energy.** About a point of energy sitting as the wallpaper with Hey Sol listening, down from several. The clock's shadows are drawn around the digits that change rather than the whole clock, the microphone is read in larger pieces, and Meridian no longer wakes for every movement of the mouse in other apps.
+
+## v1.65.0
+
+**Whole days at once.** Ask Sol to plan a day and it lays the whole day down in one go, on any date. It can also put a day template on several days, a week template over several weeks, and keep, use and delete session templates. Done on several days, each block is one repeat, edited or deleted together.
+
+**Any date.** Sol looks up what is on any day before talking about it: "a week from Friday", "in two weeks", "Oct 30", "the 25th". It no longer guesses about days far away.
+
+**Copy prompt.** The prompt copied from the AI window for another AI now has the whole-day, template and repeat commands too.
+
+**Goodbye.** Say bye and Sol says bye back and closes itself.
+
+**Hey Sol with the AI window open.** The open text chat turns into voice in the same place instead of opening a second window. Already in voice, "Hey Sol" starts a new conversation.
+
+**Morning check-in.** Your emails are summed up in a few sentences, what needs you first and the rest grouped, instead of read one by one. The news is read out by Meridian itself, four headlines with where each is from, from Google News, BBC News or NPR, whichever answers. If the Mac's network is not back yet when it wakes before the alarm, the mail and the news are tried again, and once more when you stop the alarm. With no internet at all, it says so instead of skipping.
+
+**Clock.** With no extra time zones, the main clock sits exactly in the middle again; it had been a little to the left.

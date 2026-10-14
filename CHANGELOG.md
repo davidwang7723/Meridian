@@ -1016,3 +1016,21 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Sol knows where you are.** It uses the town your Mac is in, not the city of the time zone.
 
 **Fixes.** The date on the desktop wallpaper follows the language. The Pomodoro notes panel is translated. The voice window no longer shows the card of a change you made earlier in the chat. Saying "okay, goodbye, see you later" closes the voice window. The chat shortcut closes a voice window opened by Hey Sol instead of opening a second window. The screen saver recovers if macOS says it is stopping while it is still on screen, and tries again if the page file could not be read. Notifications are no longer asked for at launch or in setup, since Meridian draws its own banners; only "Notify after quitting" asks, because that one needs macOS.
+
+## v1.67.0
+
+**Sol is much faster.** Sol's instructions were rebuilt. The part that is the same for every message is half the size it was and comes first, so Claude, OpenAI, Gemini, Groq and Ollama on your Mac read it once and keep it. What each message is about (reminders, tasks, rotations, email and so on) is worked out on the Mac from your words, with no extra model asked, and only those instructions and records are sent with it. It works in all 31 languages. Ollama stays fully on your Mac.
+
+**Sol does only what you ask.** The instructions sent with a message are reference, not orders, so answering "what should the reminder say" with "call mom at 8 pm" makes the reminder instead of calling. A question gets an answer, not an unasked change.
+
+**Fits small limits.** If a provider says the request is too large (Groq's free tier allows 8,000 tokens), Sol sends a shorter one by itself instead of failing.
+
+**Quick answers know when to step back.** The instant on-device answers now leave longer messages, stories ("I have homework...") and follow-ups like "move that one" to Sol instead of answering them as a question. Times read as hours and minutes ("2 hours 15 minutes", not "135 minutes"), and "what's after study hall" is what comes after it.
+
+**Raise the sound, per item.** Each alarm, reminder, task and the wake up alarm has its own "Raise the sound" switch, shown when it rings as an alarm.
+
+**Meridian's face for Sol.** Sol's sparkles are now Meridian's sun and clock, in the chat window and on the AI button. While Sol thinks and writes, the beams pulse and the hand turns, at the end of the text being written. Sol's answers have no bubble. The AI button matches the height of the text and voice switch.
+
+**Livelier Dock icon.** With a theme on, the Dock icon is lit at one corner and shaded at the other, with the theme colour soaking into it.
+
+**Smaller chat buttons.** The copy, regenerate and edit icons sit inside their circles, and Sol's line up with its text.

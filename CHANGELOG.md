@@ -37,7 +37,7 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
   - *Pomodoro* (small) — live countdown ring with WORK/BREAK label, task name, and cycle progress; uses `Text(timerInterval:)` for a smooth per-second countdown without forcing per-second timeline reloads.
   - *Current Session* (medium) — the active schedule block ("NOW") with time range and "ends in" countdown, plus a "NEXT UP" preview of the next block.
   - *Homework & Reminders* (large) — pending reminders and assignments sorted by date, with overdue items called out in red with an "OVERDUE" badge.
-- **App Group snapshot pipeline** — the main app writes a `widget_snapshot.json` to the shared `the app group` container every second; the widget extension reads it via `WidgetSnapshotStore` and reloads its timeline at meaningful boundaries (pomodoro segment end, block end, next block start) instead of on a fixed interval.
+- **App Group snapshot pipeline** — the main app writes a `widget_snapshot.json` to the shared `(app group)` container every second; the widget extension reads it via `WidgetSnapshotStore` and reloads its timeline at meaningful boundaries (pomodoro segment end, block end, next block start) instead of on a fixed interval.
 - **Widget build pipeline fixed** — `build.sh` now compiles the widget extension with `-Xlinker -e -Xlinker _NSExtensionMain` so the appex boots through Foundation's `NSExtensionMain` entry point. Without this, the system registered the widget but every chronod spawn crashed with `ExtensionFoundation` "Unrecognized extension type", so the widgets never showed up in the gallery despite the build technically succeeding.
 - **Accordion title bar** — the standard macOS title bar is replaced with a custom pop-out strip. In windowed mode the title bar is hidden entirely; hovering within 24pt of the top edge causes the window to grow upward by 28pt, revealing a Liquid Glass (`NSVisualEffectView`, `.titlebar` material) strip with the real traffic-light buttons. Moving the cursor away collapses it. Content never shifts — the SwiftUI host is pinned to a fixed baseline inside a `TitleBarContainer` so only the top edge of the window moves. In full-screen mode, standard macOS auto-hiding chrome is restored (traffic lights appear on cursor-to-ceiling as normal).
 
@@ -1000,3 +1000,19 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Morning check-in.** Your emails are summed up in a few sentences, what needs you first and the rest grouped, instead of read one by one. The news is read out by Meridian itself, four headlines with where each is from, from Google News, BBC News or NPR, whichever answers. If the Mac's network is not back yet when it wakes before the alarm, the mail and the news are tried again, and once more when you stop the alarm. With no internet at all, it says so instead of skipping.
 
 **Clock.** With no extra time zones, the main clock sits exactly in the middle again; it had been a little to the left.
+
+## v1.66.0
+
+**More languages.** Meridian now speaks 31 languages. The seven it came with stay inside the app. Settings, Languages has a "More languages" list: pick Japanese, German, Korean, Portuguese, Dutch, Swedish, Danish, Norwegian, Italian, Hebrew, Russian, Turkish, Polish, Czech, Hungarian, Greek, Indonesian, Thai, Vietnamese, Malay, Filipino, Ukrainian, Swahili or Urdu, press Download, and it is fetched from GitHub and joins the list. Hebrew and Urdu read right to left.
+
+**Sol's voice, in your language.** Pocket TTS speaks English, French, Spanish, German, Italian, Portuguese and Dutch. Supertonic 3 speaks Arabic, Czech, Danish, Greek, Hindi, Hungarian, Indonesian, Japanese, Korean, Polish, Russian, Swedish, Turkish, Ukrainian and Vietnamese. Chinese has its own voice. The voice for the language you are in downloads by itself, with its progress in the voice window, and again when you change language. Bengali, Norwegian, Hebrew, Thai, Malay, Filipino, Swahili and Urdu have no voice yet, so voice mode and Hey Sol are not offered in them.
+
+**Listening, in your language.** Voice mode hears French, Spanish, German, Italian, Portuguese, Hindi, Japanese, Korean and Chinese with the Mac's own speech recognition. For the other languages Whisper listens, downloaded by itself. It reads what you said when you stop talking, so Sol cannot be interrupted mid-answer in those languages.
+
+**Gentle on the Mac.** Only one voice or listening model is held in memory at a time, and only one runs at a time. Whisper is let go straight after each question and reads nothing when no one spoke.
+
+**Answers in whole words.** "Dinner is in 14 minutes" instead of "in 14m", and "how long until dinner" gets just that. "What's on my schedule right now" answers with what is on now. Ask for your tasks and you get the open ones even when none is due that day, with the task sessions planned for it.
+
+**Sol knows where you are.** It uses the town your Mac is in, not the city of the time zone.
+
+**Fixes.** The date on the desktop wallpaper follows the language. The Pomodoro notes panel is translated. The voice window no longer shows the card of a change you made earlier in the chat. Saying "okay, goodbye, see you later" closes the voice window. The chat shortcut closes a voice window opened by Hey Sol instead of opening a second window. The screen saver recovers if macOS says it is stopping while it is still on screen, and tries again if the page file could not be read. Notifications are no longer asked for at launch or in setup, since Meridian draws its own banners; only "Notify after quitting" asks, because that one needs macOS.

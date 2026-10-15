@@ -1034,3 +1034,17 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Livelier Dock icon.** With a theme on, the Dock icon is lit at one corner and shaded at the other, with the theme colour soaking into it.
 
 **Smaller chat buttons.** The copy, regenerate and edit icons sit inside their circles, and Sol's line up with its text.
+
+## v1.68.0
+
+**Half the tokens.** What Sol is sent with every message is about half the size: the same rules in fewer words, rarely used commands (whole days and templates, feedback, updating Meridian) sent only with messages about them, short ids in place of long ones, and a lighter list of commands. Faster on your Mac, cheaper and within the limits of small free plans. Long chats are summed up once they pass 40 messages, keeping the last few word for word.
+
+**Told it is wrong, Sol checks.** "That's not true", "wrong" or "no, no", in any of the 31 languages, makes Sol look at the records again and either correct itself or show you the record that says it was right, instead of agreeing.
+
+**No more phantom commands.** Sol no longer shows or reads out commands as text, never makes a change from "thanks" or "nothing else" or from being told it was wrong, and never proposes a change to something it has no id for. Its replies no longer show [brackets] around sentences.
+
+**Gets it right more often.** The day you name wins when a model picks the wrong date ("plan Saturday" landing on Monday), "move dinner to 7pm tomorrow" moves tomorrow's dinner, and answers from models that send numbers as words are read correctly.
+
+**Homework.** "I finished my English homework" marks it done instead of deleting it, from Sol or from the quick answers. "Where's my English homework" answers for English only. Homework is listed class first, so it is never read as another class's.
+
+**Cutting Sol off.** Talk over Sol and it stops sooner: it pauses after a moment of your voice and hands you the turn if you keep talking, without waiting to recognise your words. It now works in every language voice mode speaks.

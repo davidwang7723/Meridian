@@ -1070,3 +1070,7 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 ## v1.69.1
 
 **Short and quiet answers are heard.** A soft "yes", "stop" or "thanks" in voice mode was transcribed and then dropped as not loud enough. On the speakers, where Apple's echo cancellation already removes the room and Sol, any word now counts. With headphones, a word or two with some voice under it counts, everyday short answers need only the slightest sound, and the bar for speech is lower.
+
+## v1.69.2
+
+**Alarms stop after 15 minutes.** Every alarm (reminders, tasks, medicine, sessions and the wake up alarm) goes quiet after ringing for 15 minutes. The card stays on screen to answer, the Mac is no longer kept awake for it, and music it paused comes back when you answer it.

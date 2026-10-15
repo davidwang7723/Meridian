@@ -1074,3 +1074,7 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 ## v1.69.2
 
 **Alarms stop after 15 minutes.** Every alarm (reminders, tasks, medicine, sessions and the wake up alarm) goes quiet after ringing for 15 minutes. The card stays on screen to answer, the Mac is no longer kept awake for it, and music it paused comes back when you answer it.
+
+## v1.69.3
+
+**Said once.** In voice mode Sol sometimes read a sentence twice: one answer can be two replies (a lookup and the answer after it, or Sol asked again for a change it promised), and the second often began the same way. A sentence already spoken in an answer is no longer spoken again.

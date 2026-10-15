@@ -1066,3 +1066,7 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Fewer wrong cards.** A question ("what's on my schedule tomorrow?") never produces a change. Homework with no due date is a look at, never a task due tonight, and one thing you name is one card. "No, add it as a look at" is an instruction, not a complaint.
 
 **Better at reading tasks and reminders.** "Add a look at task called biology homework" adds "homework" under Biology I. "Called", "named", "that says" and quotes are left out of names, and "pages 10 to 20" or "chapters 3-5" are no longer read as times.
+
+## v1.69.1
+
+**Short and quiet answers are heard.** A soft "yes", "stop" or "thanks" in voice mode was transcribed and then dropped as not loud enough. On the speakers, where Apple's echo cancellation already removes the room and Sol, any word now counts. With headphones, a word or two with some voice under it counts, everyday short answers need only the slightest sound, and the bar for speech is lower.

@@ -1048,3 +1048,21 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Homework.** "I finished my English homework" marks it done instead of deleting it, from Sol or from the quick answers. "Where's my English homework" answers for English only. Homework is listed class first, so it is never read as another class's.
 
 **Cutting Sol off.** Talk over Sol and it stops sooner: it pauses after a moment of your voice and hands you the turn if you keep talking, without waiting to recognise your words. It now works in every language voice mode speaks.
+
+## v1.69.0
+
+**Apple's echo cancellation in voice mode.** On the Mac's speakers, Sol's voice and the microphone now go through Apple's own voice processing, the echo cancellation FaceTime uses, so Sol no longer hears itself and cuts itself off. While Sol talks, Apple's detector listens for you: start talking and Sol pauses at once, keep talking and the turn is yours, go quiet and Sol carries on. "Stop", "wait" and "hold on" always stop it. With headphones nothing changes.
+
+**Your words are kept.** Turns spoken over Sol or after cutting in are no longer thrown away as "not loud enough", times you say ("5 40 pm") are no longer taken out as Sol's own words, and numbers Sol says ("eleven thirty") are recognised as Sol's whether heard as words or digits.
+
+**Never stuck.** Voice mode notices when Sol is "speaking" with nothing playing, or waiting on a model that never answers, and goes back to listening. A microphone hiccup is retried instead of ending voice mode. Confirming a card while you are talking no longer cuts you off.
+
+**News and the web.** "What's on the news" reads the latest headlines, and "check the web" or "search the web for..." runs the search, fetched by Meridian itself so even a small local model answers with real results.
+
+**No more empty answers.** When a local model's reply comes back empty (Ollama dropping a half-written command), Sol asks again in plain text, so "call mom" places the call.
+
+**Calls.** Calling a saved contact runs at once, without a card, and Sol closes once the call starts.
+
+**Fewer wrong cards.** A question ("what's on my schedule tomorrow?") never produces a change. Homework with no due date is a look at, never a task due tonight, and one thing you name is one card. "No, add it as a look at" is an instruction, not a complaint.
+
+**Better at reading tasks and reminders.** "Add a look at task called biology homework" adds "homework" under Biology I. "Called", "named", "that says" and quotes are left out of names, and "pages 10 to 20" or "chapters 3-5" are no longer read as times.

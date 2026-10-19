@@ -1078,3 +1078,23 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 ## v1.69.3
 
 **Said once.** In voice mode Sol sometimes read a sentence twice: one answer can be two replies (a lookup and the answer after it, or Sol asked again for a change it promised), and the second often began the same way. A sentence already spoken in an answer is no longer spoken again.
+
+## v1.70.0
+
+**Faster local AI.** Sol's first messages no longer make Ollama read the whole prompt again: Meridian remembers what each model can do between launches, so the second message reuses what the first one read (seventeen seconds saved on a 27B model). The model is loaded and primed at launch and whenever the screen wakes, and the morning check-in now asks in the chat's own shape, so it starts at once, its opening sentences already turned into speech before you press Stop.
+
+**Quit works from the menu bar.** Quit Meridian in the menu bar card froze the app and the rest of the menu. It now quits.
+
+**Smoother.** The slide-out side buttons no longer rebuild their glass pills on every hover, and only a thin strip at the edge opens them, so buttons near the edge can be clicked. Switching pages happens at once instead of fading two pages in and out, and Settings opens without waiting on its font samples. Switching Sol between text and voice no longer freezes the window while the microphone starts.
+
+**Less energy.** Voice mode open costs less than half what it did: the wave is drawn at 30 frames a second (15 when the room is quiet) without a blur, and Apple's echo cancellation only does its full work while Sol is speaking.
+
+**Talking over Sol.** It now takes a voice at the Mac, not across the room, to cut Sol off.
+
+**Mark homework off by name.** "Mark off English and Biology" marks both, on one card. "I finished my English homework" marks English's, and "I finished my homework" with several open asks which. When Sol says it marked something done without doing it, it is asked to actually do it.
+
+**Overnight suggestions you can apply.** Every suggestion from the night review now comes with Apply. Suggestions written only as words ("Move Dinner to 6:30 PM") are turned into the change, and a move or an addition that would overlap something is shifted to the nearest free time.
+
+**Suggestion box.** It scrolls with Settings again after you type in it, and takes one suggestion a day per Mac, enforced by Meridian's server so it cannot be got round.
+
+**New installs.** A new Meridian starts in Futura, with Paper by day and Ember by night, and a sunset photograph behind the clock.

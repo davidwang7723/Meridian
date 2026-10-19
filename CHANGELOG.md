@@ -1098,3 +1098,7 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Suggestion box.** It scrolls with Settings again after you type in it, and takes one suggestion a day per Mac, enforced by Meridian's server so it cannot be got round.
 
 **New installs.** A new Meridian starts in Futura, with Paper by day and Ember by night, and a sunset photograph behind the clock.
+
+## v1.70.1
+
+**The side buttons, as they were and smooth.** The slide-out buttons are back to their original look and motion, and no longer stutter: the whole window was laying itself out again on every frame while they opened, each pill's size was being saved on every frame, and every view was working out the theme's colours and the day's holidays from scratch on every redraw. Now only the buttons move when they move, and the colours and holidays are worked out once.

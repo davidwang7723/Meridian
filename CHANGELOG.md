@@ -1108,3 +1108,19 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Sol adds the homework it says it adds.** "Add a history homework called Lessons one and two" made Sol answer "Adding history homework" and add nothing: it had written a task due tonight, a date nobody gave, and Meridian threw that away without a word. Homework for a class with no due date now goes in as a look at under that class, in your words ("read chapter 5", "worksheet 3"). Numbers in a name no longer count as a due date, and Sol starting a sentence with "Adding" or "Setting" with nothing behind it is asked to actually do it.
 
 **Talking over Sol, decided by words.** When your voice pauses Sol, a word of yours read by the recogniser (even a draft one) hands you the turn, and "stop" or "wait" does at once. Voice alone no longer does, so people talking in the room cannot take Sol's turn. If no words come within 2 seconds, Sol finishes what it was saying from where it paused. Cutting in also works again after the energy saving in 1.70.0 had stopped it.
+
+## v1.71.0
+
+**Alarms ring above everything.** The alarm card is now a panel that floats over every window, the menu bar included, whether or not Meridian is the app in front. It used to sit at the normal window level once another app was in front, so a window picked in Mission Control covered it and its buttons were out of reach while it rang. Esc always answers it.
+
+**Interrupt, then ring.** With Interrupt on, the alarm first listens for anything playing and pauses it, then raises the volume and rings, so the music is never turned up with it. On Stop or Snooze the volume goes back first, then the music resumes, and only music the alarm itself paused. Any app's sound counts now, not only a list of music apps.
+
+**Notification and alarm sounds, reorganised.** Settings shows one card for notifications and one for alarms, each with its sound, its own Test button, and Headphones and Mac Speakers. Each output's Raise can now go past 100%, up to 800%: the Mac's volume is raised first, up to full, and the sound is amplified for the rest. Under each raised output a line says what it will fire at right now, counting the Mac's volume and the amplification. A headphone alarm can only be raised with Interrupt on. An alarm amplified before carries over (35% at 8.0x is now 280%).
+
+**Voice mode, smoother.** The wave is drawn at 60 frames a second off the main thread and no longer rebuilds the whole window on every level or every streamed word. Switching between text and voice reuses the windows instead of building new ones each time.
+
+**Hey Sol and goodbye.** Hey Sol is heard more often: matches a little past the learned threshold are read in words before anything opens, and "Hey, so." as the recogniser writes it counts. Saying goodbye, or telling Sol to leave in any words ("you can go", "close the window", "that's enough"), closes voice mode at once, even as the last thing said.
+
+**Other languages, faster and in their own language.** A schedule question in Japanese, Chinese and the rest no longer pulls in the whole weekly timetable, or the last message's records, and today and tomorrow are recognised in 27 languages, so the first answer comes in one round instead of two (13 seconds down to about 4). Sol is reminded to answer in the app's language right before each message and keeps class names as written.
+
+**Fits the window.** Sheets are never bigger than the window and follow it as it is resized, the Focus page and Home keep their layout in a narrow window, and the window can no longer be made smaller than 1356 by 949 (or the screen, on a smaller Mac).

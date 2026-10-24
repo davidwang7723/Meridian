@@ -1140,3 +1140,7 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **The week view.** Esc while drawing, moving or stretching a session lets go of it. A click to make a session always shows its time on the sheet. A day rewritten so none of its letter's sessions are left no longer says "Day A".
 
 **Long sound names.** An imported alarm sound with a long name is shortened in the middle rather than running the row out of the window.
+
+## v1.72.1
+
+**Banners spaced evenly.** A banner with a two-line title, or with larger text, came out squeezed: little room above the title, between the title and its note, and below. Each banner now measures its content at its full height and grows to it, so every one has the same room above, between and below.

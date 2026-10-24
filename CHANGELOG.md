@@ -1144,3 +1144,9 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 ## v1.72.1
 
 **Banners spaced evenly.** A banner with a two-line title, or with larger text, came out squeezed: little room above the title, between the title and its note, and below. Each banner now measures its content at its full height and grows to it, so every one has the same room above, between and below.
+
+## v1.72.2
+
+**For anyone, not only students.** The morning check-in calls what is on your schedule sessions, not classes, and what is due tasks, not assignments, unless the schedule itself names classes. Sol does the same in its own words, no longer says "no school today" on a day without a rotation, and the overnight review sorts days into ones set by others (classes, shifts, meetings) and ones you planned. Rotations advance per day they run rather than per school day, start out as "Main rotation", and their help no longer talks about terms and schools. The tutorial and Sol's quick answers say tasks and look ats instead of homework. Sol still understands "my first class" and "do I have school tomorrow" and answers in your words.
+
+**A small fix.** A look at with no session behind it was read out in the check-in as "for today".

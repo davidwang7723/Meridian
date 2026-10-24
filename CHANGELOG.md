@@ -1124,3 +1124,19 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Other languages, faster and in their own language.** A schedule question in Japanese, Chinese and the rest no longer pulls in the whole weekly timetable, or the last message's records, and today and tomorrow are recognised in 27 languages, so the first answer comes in one round instead of two (13 seconds down to about 4). Sol is reminded to answer in the app's language right before each message and keeps class names as written.
 
 **Fits the window.** Sheets are never bigger than the window and follow it as it is resized, the Focus page and Home keep their layout in a narrow window, and the window can no longer be made smaller than 1356 by 949 (or the screen, on a smaller Mac).
+
+## v1.72.0
+
+**A morning check-in without a wake-up alarm.** With the alarm off, the first time the Mac is unlocked or woken on or after the wake time, a banner offers the check-in: Listen, or Show Text to read it in the banner. It is written at that moment, so what it says about the time and what is next is right, and written again if Listen comes more than half an hour later. It goes away at the first event of the day or at noon, comes once a day, and skips days with nothing on them.
+
+**A banner while it is read out.** Every check-in, after the alarm or not, plays with a banner that has a round pause and play button and Show Text, which opens the whole check-in in the banner, its bottom edge moving down and nothing else. When it has all been said the banner closes, or, if its text is open, Hide Text becomes Done.
+
+**The check-in and the wake-up alarm interrupt.** Both pause whatever is playing before they make a sound and start it again afterwards, only if they paused something. The wake-up alarm always rings at the Alarm card's levels for headphones and the speakers.
+
+**Sol's voice, as loud as you want.** Settings, AI, Voice has a volume for each voice engine (Pocket TTS, Supertonic, MeloTTS, the system voice), from 5% to 800%, used wherever Sol speaks: voice mode, notifications read out, the morning check-in. Test play offers the languages each voice reads in Meridian that are on this Mac.
+
+**Banners fit what is in them.** Each banner measures its own content instead of estimating it, which cut the top off some, and a banner can now be found again to be closed or opened, which is what stopped the check-in banner closing at its end.
+
+**The week view.** Esc while drawing, moving or stretching a session lets go of it. A click to make a session always shows its time on the sheet. A day rewritten so none of its letter's sessions are left no longer says "Day A".
+
+**Long sound names.** An imported alarm sound with a long name is shortened in the middle rather than running the row out of the window.

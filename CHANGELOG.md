@@ -1150,3 +1150,7 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **For anyone, not only students.** The morning check-in calls what is on your schedule sessions, not classes, and what is due tasks, not assignments, unless the schedule itself names classes. Sol does the same in its own words, no longer says "no school today" on a day without a rotation, and the overnight review sorts days into ones set by others (classes, shifts, meetings) and ones you planned. Rotations advance per day they run rather than per school day, start out as "Main rotation", and their help no longer talks about terms and schools. The tutorial and Sol's quick answers say tasks and look ats instead of homework. Sol still understands "my first class" and "do I have school tomorrow" and answers in your words.
 
 **A small fix.** A look at with no session behind it was read out in the check-in as "for today".
+
+## v1.72.3
+
+**The morning check-in is read out again after the wake-up alarm.** Since 1.72.0 it was written on time every morning and then never said: it waited for its banner to be on screen before speaking, and after the alarm it was ready to speak before the banner had appeared, so it took the banner as closed and stayed silent. It now stops only when the banner is actually closed.

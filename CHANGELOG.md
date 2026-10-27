@@ -1154,3 +1154,7 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 ## v1.72.3
 
 **The morning check-in is read out again after the wake-up alarm.** Since 1.72.0 it was written on time every morning and then never said: it waited for its banner to be on screen before speaking, and after the alarm it was ready to speak before the banner had appeared, so it took the banner as closed and stayed silent. It now stops only when the banner is actually closed.
+
+## v1.72.4
+
+**Alarms no longer start music you had paused.** Since 1.71.0 any app making sound counted as something playing, and the play/pause key Meridian presses goes to whichever player was used last, not to the app making the sound. A video editor or a call app being heard pressed the key, and the music you had paused yourself started over the alarm. Only the apps the key controls (music players and browsers) count again, so the key is pressed only when one of them is playing, and pressed again afterwards only to resume what it paused.

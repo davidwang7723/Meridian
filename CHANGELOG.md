@@ -1158,3 +1158,7 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 ## v1.72.4
 
 **Alarms no longer start music you had paused.** Since 1.71.0 any app making sound counted as something playing, and the play/pause key Meridian presses goes to whichever player was used last, not to the app making the sound. A video editor or a call app being heard pressed the key, and the music you had paused yourself started over the alarm. Only the apps the key controls (music players and browsers) count again, so the key is pressed only when one of them is playing, and pressed again afterwards only to resume what it paused.
+
+## v1.72.5
+
+**Holidays on the right days.** Every holiday was checked against Nager.Date, Hebcal and the Umm al-Qura calendar for 2026 to 2030. Black Friday is now the day after Thanksgiving rather than the fourth Friday of November, which in 2030 would have been a week early. The first days of spring, summer and autumn and the winter solstice are worked out astronomically for your time zone each year instead of being fixed dates, which were a day out in some years. Good Friday is now in the Canada, UK and Australia sets, where it is a public holiday.

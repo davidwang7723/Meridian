@@ -1162,3 +1162,7 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 ## v1.72.5
 
 **Holidays on the right days.** Every holiday was checked against Nager.Date, Hebcal and the Umm al-Qura calendar for 2026 to 2030. Black Friday is now the day after Thanksgiving rather than the fourth Friday of November, which in 2030 would have been a week early. The first days of spring, summer and autumn and the winter solstice are worked out astronomically for your time zone each year instead of being fixed dates, which were a day out in some years. Good Friday is now in the Canada, UK and Australia sets, where it is a public holiday.
+
+## v1.72.6
+
+**No freeze after waking.** Coming back to Meridian after the Mac slept, the side buttons could freeze long enough for the spinning cursor. Hey Sol started the microphone as the Mac woke, while its audio was still waking too, and that held everything else still. The microphone now opens and closes on its own, away from the window. If Meridian ever freezes for more than a second just after a wake, it now keeps a short report of what it was doing in ~/Library/Logs/Meridian/Hangs, so the cause can be found.

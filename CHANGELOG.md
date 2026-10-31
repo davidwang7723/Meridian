@@ -37,7 +37,7 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
   - *Pomodoro* (small) — live countdown ring with WORK/BREAK label, task name, and cycle progress; uses `Text(timerInterval:)` for a smooth per-second countdown without forcing per-second timeline reloads.
   - *Current Session* (medium) — the active schedule block ("NOW") with time range and "ends in" countdown, plus a "NEXT UP" preview of the next block.
   - *Homework & Reminders* (large) — pending reminders and assignments sorted by date, with overdue items called out in red with an "OVERDUE" badge.
-- **App Group snapshot pipeline** — the main app writes a `widget_snapshot.json` to the shared `group.com.david.meridian` container every second; the widget extension reads it via `WidgetSnapshotStore` and reloads its timeline at meaningful boundaries (pomodoro segment end, block end, next block start) instead of on a fixed interval.
+- **App Group snapshot pipeline** — the main app writes a `widget_snapshot.json` to the shared `` container every second; the widget extension reads it via `WidgetSnapshotStore` and reloads its timeline at meaningful boundaries (pomodoro segment end, block end, next block start) instead of on a fixed interval.
 - **Widget build pipeline fixed** — `build.sh` now compiles the widget extension with `-Xlinker -e -Xlinker _NSExtensionMain` so the appex boots through Foundation's `NSExtensionMain` entry point. Without this, the system registered the widget but every chronod spawn crashed with `ExtensionFoundation` "Unrecognized extension type", so the widgets never showed up in the gallery despite the build technically succeeding.
 - **Accordion title bar** — the standard macOS title bar is replaced with a custom pop-out strip. In windowed mode the title bar is hidden entirely; hovering within 24pt of the top edge causes the window to grow upward by 28pt, revealing a Liquid Glass (`NSVisualEffectView`, `.titlebar` material) strip with the real traffic-light buttons. Moving the cursor away collapses it. Content never shifts — the SwiftUI host is pinned to a fixed baseline inside a `TitleBarContainer` so only the top edge of the window moves. In full-screen mode, standard macOS auto-hiding chrome is restored (traffic lights appear on cursor-to-ceiling as normal).
 
@@ -1166,3 +1166,15 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 ## v1.72.6
 
 **No freeze after waking.** Coming back to Meridian after the Mac slept, the side buttons could freeze long enough for the spinning cursor. Hey Sol started the microphone as the Mac woke, while its audio was still waking too, and that held everything else still. The microphone now opens and closes on its own, away from the window. If Meridian ever freezes for more than a second just after a wake, it now keeps a short report of what it was doing in ~/Library/Logs/Meridian/Hangs, so the cause can be found.
+
+## v1.73.0
+
+**Nothing lost after "Hey Sol".** Voice mode's microphone takes about a second to start, and whatever was said in that second went nowhere, so the start of a question after "Hey Sol" was often missing. Hey Sol's own microphone now keeps everything said from the phrase on and hands it to voice mode the moment its microphone starts, so the whole question arrives, none of it twice. Voice mode opens as soon as the phrase is recognised and hears where the question ends by the words, the way it does for every turn, rather than by loudness, which let a fan or music keep a question going for twelve seconds.
+
+**Hey Sol hears you while the room talks.** Each near match used to be read in full, up to eleven seconds of the room's talk, before Hey Sol listened again, and a real "Hey Sol" said meanwhile was missed. Only the opening is read now, at once, which also costs about a third as much energy. A breath inside a question no longer ends it a word early, and the room's own level is no longer raised by your voice.
+
+**Times and numbers said properly.** Sol writes times, dates, prices and temperatures as they would appear on screen and Meridian says them: "18:00" is "six P M", "22°C" is "twenty two degrees Celsius", "$12.50" is "twelve dollars fifty", "June 12" is "June twelfth", along with ranges, decimals, minus signs and units such as km/h. Asked to spell them itself, Sol wrote "eighteen o'clock". Other languages keep the old rule.
+
+**Goodbyes close voice mode.** "Goodbye, Sol", "Anyways, goodbye", "Bye Sol, thanks for the help" and "Okay goodbye, see you tomorrow" went to Sol as questions and the window stayed open. They now end the conversation.
+
+**Mute while Sol answers.** The microphone button stays while Sol thinks and speaks, so the room can't cut Sol off, for that answer only. The voice window no longer flashes a shortcut hint for the second the microphone takes to start.

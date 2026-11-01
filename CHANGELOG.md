@@ -1184,3 +1184,11 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Ready for the clocks going back.** The countdown to the next session counted the difference between two clock readings, so on the night the clocks go back it showed an hour too little until 2 AM. It now counts real time. A medicine course set to stop on the day the clocks go back no longer loses its last hour's doses: that day has 25 hours, not 24.
 
 **Windows: weekday reminders at their own time.** A reminder repeating on chosen weekdays stepped forward a fixed 24 hours at a time, so once the clocks changed it rang an hour early. It now keeps its clock time across the change.
+
+## v1.74.0
+
+**Liquid Glass that follows your Mac.** Every piece of glass in Meridian took the theme's light or dark, and glass drawn light lays a white wash over itself whatever the transparency slider in System Settings says. The glass itself now takes your Mac's appearance, so it is as clear or as tinted as you set it there, like the system's own, while what sits on it keeps the theme's colours. The top bar is the system's standard glass rather than the lensing kind it used before.
+
+**Countdown cards on glass.** Over a photograph they are now the same see-through glass instead of a dark pill, with more room inside the capsule so the title and the last line no longer run into its rounded ends. The number is lifted towards white with a soft shadow, so it reads on any picture.
+
+**Bigger, rounder windows.** Every window that opens on top of the page is a size larger, still never larger than the main window, with rounder corners from the moment it appears. The heading bars across their tops are shorter.

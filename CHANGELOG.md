@@ -1178,3 +1178,9 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Goodbyes close voice mode.** "Goodbye, Sol", "Anyways, goodbye", "Bye Sol, thanks for the help" and "Okay goodbye, see you tomorrow" went to Sol as questions and the window stayed open. They now end the conversation.
 
 **Mute while Sol answers.** The microphone button stays while Sol thinks and speaks, so the room can't cut Sol off, for that answer only. The voice window no longer flashes a shortcut hint for the second the microphone takes to start.
+
+## v1.73.1
+
+**Ready for the clocks going back.** The countdown to the next session counted the difference between two clock readings, so on the night the clocks go back it showed an hour too little until 2 AM. It now counts real time. A medicine course set to stop on the day the clocks go back no longer loses its last hour's doses: that day has 25 hours, not 24.
+
+**Windows: weekday reminders at their own time.** A reminder repeating on chosen weekdays stepped forward a fixed 24 hours at a time, so once the clocks changed it rang an hour early. It now keeps its clock time across the change.

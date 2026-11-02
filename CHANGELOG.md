@@ -37,7 +37,7 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
   - *Pomodoro* (small) — live countdown ring with WORK/BREAK label, task name, and cycle progress; uses `Text(timerInterval:)` for a smooth per-second countdown without forcing per-second timeline reloads.
   - *Current Session* (medium) — the active schedule block ("NOW") with time range and "ends in" countdown, plus a "NEXT UP" preview of the next block.
   - *Homework & Reminders* (large) — pending reminders and assignments sorted by date, with overdue items called out in red with an "OVERDUE" badge.
-- **App Group snapshot pipeline** — the main app writes a `widget_snapshot.json` to the shared `` container every second; the widget extension reads it via `WidgetSnapshotStore` and reloads its timeline at meaningful boundaries (pomodoro segment end, block end, next block start) instead of on a fixed interval.
+- **App Group snapshot pipeline** — the main app writes a `widget_snapshot.json` to the shared `the app group` container every second; the widget extension reads it via `WidgetSnapshotStore` and reloads its timeline at meaningful boundaries (pomodoro segment end, block end, next block start) instead of on a fixed interval.
 - **Widget build pipeline fixed** — `build.sh` now compiles the widget extension with `-Xlinker -e -Xlinker _NSExtensionMain` so the appex boots through Foundation's `NSExtensionMain` entry point. Without this, the system registered the widget but every chronod spawn crashed with `ExtensionFoundation` "Unrecognized extension type", so the widgets never showed up in the gallery despite the build technically succeeding.
 - **Accordion title bar** — the standard macOS title bar is replaced with a custom pop-out strip. In windowed mode the title bar is hidden entirely; hovering within 24pt of the top edge causes the window to grow upward by 28pt, revealing a Liquid Glass (`NSVisualEffectView`, `.titlebar` material) strip with the real traffic-light buttons. Moving the cursor away collapses it. Content never shifts — the SwiftUI host is pinned to a fixed baseline inside a `TitleBarContainer` so only the top edge of the window moves. In full-screen mode, standard macOS auto-hiding chrome is restored (traffic lights appear on cursor-to-ceiling as normal).
 
@@ -1192,3 +1192,17 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Countdown cards on glass.** Over a photograph they are now the same see-through glass instead of a dark pill, with more room inside the capsule so the title and the last line no longer run into its rounded ends. The number is lifted towards white with a soft shadow, so it reads on any picture.
 
 **Bigger, rounder windows.** Every window that opens on top of the page is a size larger, still never larger than the main window, with rounder corners from the moment it appears. The heading bars across their tops are shorter.
+
+---
+
+## v1.75.0
+
+**Sol checks its own changes, and fixes what fails.** Before, a change Sol wrote was only tried when you pressed Yes, and if it failed, Sol never heard about it: a pasted day came back as seven adds, every one refused for overlapping the old blocks, and Sol carried on as if it had worked. Now every change is played out against the day as it really is before its card appears, in the order written, so "delete what is in the way, then add" goes through in one go. Anything that would fail goes straight back to Sol with the day as it is now and the exact command to fix it, up to three times, and you only see cards that will work. A change that still fails after you say Yes goes back to Sol too, told plainly that it failed, and after every set of cards Sol sees the day as it now stands, so it never loses track of what it deleted.
+
+**Sol does what you said, all of it.** "Except study hall and dinner" is held to: a card that would delete them goes back to Sol. "Remove all blocks from today" has to remove all of them, not four of seven. "Add these" can no longer delete blocks that are not in the way. A command written out as text instead of called now runs, and a reply that says it will edit your day without doing it is asked for the change.
+
+**Paste your day in.** A school portal's day pasted into the chat (times, class, teacher, room) is read by Meridian itself, and Sol is given the rows exactly, so it no longer retypes them from memory with the times moved. Every row has to land on the day with its name and times as written, and the teacher and room go into the notes.
+
+**Drop a picture on the chat.** Dragging a screenshot or a picture anywhere over the chat lights up the message box, and dropping it turns the box into a card with the pictures' thumbnails across the top, each with its own remove button.
+
+**A weekly block off one day.** Sol can take a weekly block off a single date without touching the rest of the weeks.

@@ -37,7 +37,7 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
   - *Pomodoro* (small) — live countdown ring with WORK/BREAK label, task name, and cycle progress; uses `Text(timerInterval:)` for a smooth per-second countdown without forcing per-second timeline reloads.
   - *Current Session* (medium) — the active schedule block ("NOW") with time range and "ends in" countdown, plus a "NEXT UP" preview of the next block.
   - *Homework & Reminders* (large) — pending reminders and assignments sorted by date, with overdue items called out in red with an "OVERDUE" badge.
-- **App Group snapshot pipeline** — the main app writes a `widget_snapshot.json` to the shared `the app group` container every second; the widget extension reads it via `WidgetSnapshotStore` and reloads its timeline at meaningful boundaries (pomodoro segment end, block end, next block start) instead of on a fixed interval.
+- **App Group snapshot pipeline** — the main app writes a `widget_snapshot.json` to the shared `group.com.meridianapp.meridian` container every second; the widget extension reads it via `WidgetSnapshotStore` and reloads its timeline at meaningful boundaries (pomodoro segment end, block end, next block start) instead of on a fixed interval.
 - **Widget build pipeline fixed** — `build.sh` now compiles the widget extension with `-Xlinker -e -Xlinker _NSExtensionMain` so the appex boots through Foundation's `NSExtensionMain` entry point. Without this, the system registered the widget but every chronod spawn crashed with `ExtensionFoundation` "Unrecognized extension type", so the widgets never showed up in the gallery despite the build technically succeeding.
 - **Accordion title bar** — the standard macOS title bar is replaced with a custom pop-out strip. In windowed mode the title bar is hidden entirely; hovering within 24pt of the top edge causes the window to grow upward by 28pt, revealing a Liquid Glass (`NSVisualEffectView`, `.titlebar` material) strip with the real traffic-light buttons. Moving the cursor away collapses it. Content never shifts — the SwiftUI host is pinned to a fixed baseline inside a `TitleBarContainer` so only the top edge of the window moves. In full-screen mode, standard macOS auto-hiding chrome is restored (traffic lights appear on cursor-to-ceiling as normal).
 
@@ -1206,3 +1206,41 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Drop a picture on the chat.** Dragging a screenshot or a picture anywhere over the chat lights up the message box, and dropping it turns the box into a card with the pictures' thumbnails across the top, each with its own remove button.
 
 **A weekly block off one day.** Sol can take a weekly block off a single date without touching the rest of the weeks.
+
+---
+
+## v1.76.0
+
+**Sol uses your computer.** Ask Sol to check something on a website, in an app, or in the terminal and it does it, step by step, until it is done. Web pages open in its own window in your Chrome, where you are already signed in to Gmail, your school's site and Teams. Apps on your screen get clicked and typed into by Sol's own cursor, an arrow with its name on it that glides where it goes, so your pointer stays where you left it. A small window above everything shows what Sol is doing, with Pause (add a note before it carries on) and Stop. Sol's chat and voice windows never get in its way: it clicks right through them.
+
+**Sol plans first, then follows the plan.** Before any job with more than one step, Sol writes a plan, and it sits above the message box while Sol works, each step ticked as it finishes and the current one pulsing. Sol cannot say it is finished while steps are left; it either does them or says why one cannot be done.
+
+**Faster and surer on Claude Code.** With Claude Code as Sol's model, every command is now a real tool Claude Code calls, not text the app has to read back, so commands are never written wrong and a whole job runs in one go: a four-part question in the terminal answers in about ten seconds.
+
+**Coding agents as Sol's model.** Claude Code, Codex and Gemini CLI, signed in with your own account, can run Sol: pick "Coding agents" in Sol's settings. The model list finds Claude Code's newest models by itself and leaves out ones your account cannot use.
+
+**MCP servers.** Connect your school's LMS or any other MCP server in Settings, AI: paste a link, a command or a config block from Claude, Cursor or VS Code, or import the servers you already set up in those apps. Keys stay in your keychain, and a server that fails says why.
+
+**Plans that run on their own.** Settings, AI, Plans: steps for Sol, a time and the days, and Sol runs them for you, even catching up when you open the laptop if it was shut at the time.
+
+**Charts, flashcards and quizzes in the chat.** Ask Sol to show, compare or quiz you and it draws it right in the chat: charts, flashcards, quizzes, tables and small interactive pages.
+
+**Sol asks before it plans.** Planning a test's review, a task, a reminder or medicine, Sol first asks what it needs to know, as a short form in the chat (or out loud in voice mode), then plans. It can also push or pull the letter rotation for a day off.
+
+**Assessments.** Tasks has an Assessments page: add a test with its date and units, and Sol estimates the review time (adjustable) and says whether cramming is fine. Cram plans a morning cram, a night review and a final look on test day; collective review asks you questions every day, asks again what you got wrong, and quizzes you on everything the day before.
+
+**How was the time?** After a session, a Pomodoro run or a review, Meridian asks whether the time was right, too much or not enough, and learns from it, separately for tasks and for reviews, without letting one odd day throw it off.
+
+**Instructions for tasks and tests.** Give a task or a test the link to its assignment, rubric or unit page and Sol reads it and keeps notes, every number, date and weight exact, for planning from.
+
+**A better morning check-in.** The morning check-in is now a card you can read along with, pause, and act on: buttons like "Plan Biology 2.3 with Sol" open Sol with everything it needs already said.
+
+**Night check-in.** Select all on every page, All to tomorrow for what is left, and a page for what to remind you of in the morning, which goes into the morning check-in.
+
+**Pictures go to Sol as pictures.** Dropping or attaching a picture now sends the picture itself to models that can see, local ones included, and dropping onto the message box no longer pastes a file path.
+
+**Quieter banners.** Notification banners make no sound while something is playing.
+
+**Weather straight away.** The forecast shows the moment Meridian opens.
+
+**Smaller fixes.** Settings, AI opens without a pause. Hey Sol asks for the microphone again if macOS forgot it. A pulsing line shows while Sol is writing a command, instead of the command itself. Voice mode no longer breaks Sol's commands.

@@ -1272,3 +1272,11 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **A tidier chat.** When Sol's turn is over, everything it did folds into one small line saying how many actions were done; click it to see them all again. Anything that failed stays out where you can see it.
 
 **Icons, not emoji.** Sol's plan checklist, its steps on the computer and its terminal runs are drawn with the app's own icons.
+
+## v1.79.0
+
+**Cut in on Sol with your voice, not the room's.** Sol learns how loud your voice reaches your Mac from your own turns, and pauses only for a voice that close. Someone talking across the room, a TV or a knock no longer stops it, while a word or two of yours does, counted from the very first syllable. Keep talking and the turn is yours even before your words are read; "mm-hm" or "yeah" on their own let Sol carry on.
+
+**Nothing lost while voice mode starts.** What you say while the window still shows Ready is kept and heard, instead of the start of your question going missing.
+
+**A microphone that stays on.** Saying "Hey Sol" on its own in voice mode no longer leaves the window showing Listening while hearing nothing.

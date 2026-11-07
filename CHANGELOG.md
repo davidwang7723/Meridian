@@ -1280,3 +1280,19 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Nothing lost while voice mode starts.** What you say while the window still shows Ready is kept and heard, instead of the start of your question going missing.
 
 **A microphone that stays on.** Saying "Hey Sol" on its own in voice mode no longer leaves the window showing Listening while hearing nothing.
+
+## v1.80.0
+
+**Sol does what it says.** Answering Sol's question ("What should the reminder say?" "Go to watch a play.") now counts as the request it asked about, so the reminder is made instead of being dropped while Sol says "I'll add". A change Sol announces is never thrown away as unasked, and when something is left off a card Sol is told why instead of being told "Done". Times like "7.15 PM", "19:15" and "7pm", repeats like "Daily" and "every day", short weekday names, and dates like "tomorrow" on calendar blocks all work. A block moved by its start keeps its length, "ok make it 5pm" is a correction rather than a yes to every card, and a cut off or broken command is said rather than lost.
+
+**Hey Sol keeps your first words.** What you say while voice mode is starting, or after "Hey Sol" and a pause, is kept and heard instead of going missing.
+
+**Cutting in, fixed.** Sol now learns your typical voice level instead of only ever raising it, so a sentence at a normal voice stops it again. When you cut in, Sol remembers saying only what you heard.
+
+**Bypass means bypass.** With Permissions set to Bypass, Sol's changes are made without a confirm card. Email still waits for its card.
+
+**Banners from Sol, with buttons.** Sol can send a notification with up to two buttons, such as "Reverse changes" for a plan that edited your schedule. The plan step "Tell me in a notification" lets you choose a temporary banner or one that stays until you close it.
+
+**A new banner look.** Smaller buttons, more room around the text, rounder corners, no icon beside the title, and a lighter title with its lines closer together. A title that only just misses one line is set a little smaller to fit.
+
+**Plans that read your school site keep going.** Tools that only read are no longer stopped by a card at 5 AM, and the Blackbaud server is started by Meridian itself.

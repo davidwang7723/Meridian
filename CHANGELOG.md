@@ -1244,3 +1244,21 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Weather straight away.** The forecast shows the moment Meridian opens.
 
 **Smaller fixes.** Settings, AI opens without a pause. Hey Sol asks for the microphone again if macOS forgot it. A pulsing line shows while Sol is writing a command, instead of the command itself. Voice mode no longer breaks Sol's commands.
+
+---
+
+## v1.77.0
+
+**Sol asks you in a window of its own.** When Sol needs your say and you are not in the chat, it opens a window above everything: a title, a line on what it is for, then questions to fill in or a list of things to go over one by one. Each thing comes with Sol's suggested choices (plan it with Sol, do it now, ask Sol something, talk it over in the chat, open a link, or later) and a box to type your own. A window made while the lid was shut is waiting when you come back, and closing it dismisses it.
+
+**Plan things with Sol, one at a time.** Choosing to plan something opens a planning window just for it: the conversation on the left, Sol's proposed changes on the right, each one played out on the day's timeline (a new session growing in, a moved one sliding, a deleted one fading). Done planning hands it back to Sol, the row says "Sol is composing" while it makes the plan final, then it ticks off and the next one opens. Your main chat is left as it was.
+
+**Plans that go over things with you.** A plan in Settings, AI can end by putting what it found in an ask window, and changes it wants to make while you are away wait there as rows instead of getting stuck. Each step can carry commands picked by name from everything Sol can do (#ask-mcp, #open-website, #call-api and more), with the details they need: which MCP server and tool, which page, which command.
+
+**Let Sol help.** A work session of a project or a review session for a test now starts with a banner that stays, with Let Sol help on it. Sol opens with everything it needs: the project's steps and how far along it is, or the test's material and what you got wrong in the daily questions, and helps you carry on from there.
+
+**A voice window that makes room.** When changes wait for your yes, the voice window grows evenly around where you left it: the cards on the left, what you are saying on the right. Point at a card and your words make way for the change played out on that day's timeline.
+
+**Review sessions stay with their test.** Sessions Sol moves, splits or adds for a test or a task stay part of it, keeping the same total time, so they count toward the review and get their own "how was the time" afterwards.
+
+**Steadier.** Sol's clicks land in every app (chat lists and canvases included) and pass through its own windows to what is under them. Sol no longer works on another desktop, only on yours. Plans no longer stall on MCP servers that do not label their reading tools, and editing a plan no longer makes it run twice.

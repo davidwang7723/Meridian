@@ -37,7 +37,7 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
   - *Pomodoro* (small) — live countdown ring with WORK/BREAK label, task name, and cycle progress; uses `Text(timerInterval:)` for a smooth per-second countdown without forcing per-second timeline reloads.
   - *Current Session* (medium) — the active schedule block ("NOW") with time range and "ends in" countdown, plus a "NEXT UP" preview of the next block.
   - *Homework & Reminders* (large) — pending reminders and assignments sorted by date, with overdue items called out in red with an "OVERDUE" badge.
-- **App Group snapshot pipeline** — the main app writes a `widget_snapshot.json` to the shared `group.com.meridianapp.meridian` container every second; the widget extension reads it via `WidgetSnapshotStore` and reloads its timeline at meaningful boundaries (pomodoro segment end, block end, next block start) instead of on a fixed interval.
+- **App Group snapshot pipeline** — the main app writes a `widget_snapshot.json` to the shared `the app group` container every second; the widget extension reads it via `WidgetSnapshotStore` and reloads its timeline at meaningful boundaries (pomodoro segment end, block end, next block start) instead of on a fixed interval.
 - **Widget build pipeline fixed** — `build.sh` now compiles the widget extension with `-Xlinker -e -Xlinker _NSExtensionMain` so the appex boots through Foundation's `NSExtensionMain` entry point. Without this, the system registered the widget but every chronod spawn crashed with `ExtensionFoundation` "Unrecognized extension type", so the widgets never showed up in the gallery despite the build technically succeeding.
 - **Accordion title bar** — the standard macOS title bar is replaced with a custom pop-out strip. In windowed mode the title bar is hidden entirely; hovering within 24pt of the top edge causes the window to grow upward by 28pt, revealing a Liquid Glass (`NSVisualEffectView`, `.titlebar` material) strip with the real traffic-light buttons. Moving the cursor away collapses it. Content never shifts — the SwiftUI host is pinned to a fixed baseline inside a `TitleBarContainer` so only the top edge of the window moves. In full-screen mode, standard macOS auto-hiding chrome is restored (traffic lights appear on cursor-to-ceiling as normal).
 
@@ -1262,3 +1262,13 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Review sessions stay with their test.** Sessions Sol moves, splits or adds for a test or a task stay part of it, keeping the same total time, so they count toward the review and get their own "how was the time" afterwards.
 
 **Steadier.** Sol's clicks land in every app (chat lists and canvases included) and pass through its own windows to what is under them. Sol no longer works on another desktop, only on yours. Plans no longer stall on MCP servers that do not label their reading tools, and editing a plan no longer makes it run twice.
+
+## v1.78.0
+
+**Lighter on the battery.** Hey Sol no longer hands every near miss to the speech recogniser: stretches with no voice in them (a fan, a knock, the room) are let go at once, a phrase it just turned down is not read again for two seconds, and a loud match over your Mac's own speakers is skipped. Reads went from about 69 to about 16 every five minutes with music playing.
+
+**Sol stays quiet once the music starts.** Ask Sol to play a song or a video and, once it is playing, the rest of the answer is shown instead of spoken over it.
+
+**A tidier chat.** When Sol's turn is over, everything it did folds into one small line saying how many actions were done; click it to see them all again. Anything that failed stays out where you can see it.
+
+**Icons, not emoji.** Sol's plan checklist, its steps on the computer and its terminal runs are drawn with the app's own icons.

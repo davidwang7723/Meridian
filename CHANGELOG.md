@@ -1319,3 +1319,7 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Plans can reach your connected servers again.** Sol's calls to MCP tools keep their server and tool names, read-only lookups run without a card, and the blank "Use on" card is gone. The plan question window can be dragged by its top.
 
 **A new look for windows.** Pop-up windows have a pill top bar and rounder corners, editing windows use a plainer modern font, and text boxes have outlines. The traffic light buttons sit where they should on every page, the AI chat always opens in its own window, and the Home top row is rearranged.
+
+## v1.81.1
+
+**Settings, tidied.** The buttons down the side of Settings have outlines, and each dropdown now opens straight down, smoothly, with its rows staying in place.

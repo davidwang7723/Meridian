@@ -1327,3 +1327,17 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 ## v1.81.2
 
 **A clearer clock on Home.** Over a picture, the clock in the Home window has slightly stronger, soft letter shadows, so it stands out better. The clock on the desktop wallpaper is unchanged.
+
+## v1.82.0
+
+**Sol can reach your Contacts.** Add from Contacts in Settings puts people on Sol's call list without typing them in. With your Mac's permission, Sol can also look up and call anyone in Contacts by name. If two people match, it asks which one.
+
+**Move and fill the window from the top, on every page.** The top of the window is a bigger handle for dragging. Double click it to fill the screen, and again to go back to the size it was. Buttons up there still work as buttons.
+
+**MCP servers you can refresh.** Each server in Settings has a Refresh button. If a connection really has dropped, Meridian reconnects and tries a read-only tool again, and it leaves a working connection alone to save energy.
+
+**Ten more plain fonts.** Helvetica, Arial, Lucida, Tahoma, Trebuchet, PT Sans, Geneva, Galvji, SD Gothic and Hiragino.
+
+**Pop-ups with room to breathe.** Windows whose content ran into the pill at the top now have space under it, and scrolling content goes under the pill instead of over it.
+
+**Smaller fixes.** Your birthday saves as soon as you pick it, Nothing on schedule is easier to read over a picture on Home, and the missing phone icon in Settings is back.

@@ -1296,3 +1296,26 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **A new banner look.** Smaller buttons, more room around the text, rounder corners, no icon beside the title, and a lighter title with its lines closer together. A title that only just misses one line is set a little smaller to fit.
 
 **Plans that read your school site keep going.** Tools that only read are no longer stopped by a card at 5 AM, and the Blackbaud server is started by Meridian itself.
+
+
+## v1.81.0
+
+**Hey Sol hears your whole first sentence.** Starting echo cancellation silenced the microphone for about two seconds, right when you were asking your question. Your first turn now stays on the plain microphone, and the window goes to Listening at once.
+
+**Interrupt Sol whenever you want.** The microphone stays open while Sol talks, so a voice at your Mac pauses it. Background talk still doesn't.
+
+**Sends when you're done, waits when you're not.** A finished question or statement goes in about half a second. If you stop on "uhh", "and" or half a sentence, Sol waits five seconds for the rest.
+
+**Sol stops hearing itself as you.** Words that are only Sol's own, read late by the recogniser, are no longer sent as your message, and the same sentence can't go out twice.
+
+**A softer pause, an exact memory.** Sol fades out when it pauses for you instead of clicking, and remembers saying only up to the word you cut in on. A microphone that stops delivering sound opens again by itself.
+
+**Enter and Delete in voice mode.** Enter sends what you've said, Delete clears it.
+
+**Sol can add to your morning check-in.** Ask Sol to bring something up in the morning, or use the new Add to my morning check-in action in a plan.
+
+**A cleaner morning check-in.** No more square brackets in the text, and the card closes when it finishes reading.
+
+**Plans can reach your connected servers again.** Sol's calls to MCP tools keep their server and tool names, read-only lookups run without a card, and the blank "Use on" card is gone. The plan question window can be dragged by its top.
+
+**A new look for windows.** Pop-up windows have a pill top bar and rounder corners, editing windows use a plainer modern font, and text boxes have outlines. The traffic light buttons sit where they should on every page, the AI chat always opens in its own window, and the Home top row is rearranged.

@@ -1341,3 +1341,21 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Pop-ups with room to breathe.** Windows whose content ran into the pill at the top now have space under it, and scrolling content goes under the pill instead of over it.
 
 **Smaller fixes.** Your birthday saves as soon as you pick it, Nothing on schedule is easier to read over a picture on Home, and the missing phone icon in Settings is back.
+
+## v1.83.0
+
+**See a change before it happens.** When Sol asks to add, move or delete a session or reminder, its card plays the change on a small timeline. The day scrolls to the new time with the session held in the middle, then the session takes its new length. A deleted one fades away. With Bypass on, the same animation plays once in the chat.
+
+**Voice mode, rearranged.** A card or a change now takes the wave's place, and the window grows evenly around where it stands to fit it. When it is done the wave comes back and the window returns to its size. What Sol is doing shows as one small line under the wave the moment it happens, for five seconds, with a new one replacing the last. The microphone and Send buttons moved to the bottom.
+
+**Sol answers sooner.** A sentence that has clearly ended goes straight away, even in a noisy room, and one ending on words like "me" or "this" no longer waits five seconds.
+
+**Interrupting Sol, fixed.** Sol catches your first words when you cut in, and no longer shows Speaking with no sound after a few answers.
+
+**Reply to part of an answer.** Select Sol's words and press Reply to ask about just that. Selecting looks better too, and can cross paragraphs.
+
+**A tidier chat.** Copy, Regenerate and Edit appear when you hover over a message, and every message can be copied. Actions done folds back when you click any of its actions. New Chat matches the top bar.
+
+**MCP servers that recover by themselves.** A lookup that fails reconnects and tries again before Sol says anything is wrong, so a signed-out school login often fixes itself. Sol also knows which servers you have.
+
+**Smaller fixes.** The review time card fits its contents, and no mouse emoji in voice mode.

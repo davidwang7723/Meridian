@@ -1323,3 +1323,7 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 ## v1.81.1
 
 **Settings, tidied.** The buttons down the side of Settings have outlines, and each dropdown now opens straight down, smoothly, with its rows staying in place.
+
+## v1.81.2
+
+**A clearer clock on Home.** Over a picture, the clock in the Home window has slightly stronger, soft letter shadows, so it stands out better. The clock on the desktop wallpaper is unchanged.

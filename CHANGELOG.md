@@ -1359,3 +1359,13 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **MCP servers that recover by themselves.** A lookup that fails reconnects and tries again before Sol says anything is wrong, so a signed-out school login often fixes itself. Sol also knows which servers you have.
 
 **Smaller fixes.** The review time card fits its contents, and no mouse emoji in voice mode.
+
+## v1.83.1
+
+**Voice mode hears more languages.** Arabic, Czech, Danish, Dutch, Greek, Hungarian, Indonesian, Polish, Russian, Swedish, Turkish, Ukrainian and Vietnamese now show your words as you talk and send by themselves when you stop. Before, nothing appeared and you had to press Send.
+
+**Chinese, heard live.** Your words appear as you say them and Sol answers when you finish. Other languages get the same faster words.
+
+**Hindi in its own script.** What you say in Hindi is written in Devanagari instead of Latin letters.
+
+**Smaller fix.** The Cancel and Send buttons in voice mode keep their whole label in every language.

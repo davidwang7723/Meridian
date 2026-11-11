@@ -1398,3 +1398,7 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 - The "Sol is using the computer" window can be dragged and stays where you leave it, and Sol's cursor shows for every run.
 - "Search the web and tell me X" searches for X, and Sol no longer searches the web for your own LMS or homework.
 - Deleting a Sol chat also removes it from the chat search index right away.
+
+## v1.84.1
+
+**One Skip button.** When Sol asks you to go over things in a window of its own, each item has a single Skip again. Sol had started adding a Skip of its own next to the window's.

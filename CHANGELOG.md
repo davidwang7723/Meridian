@@ -1402,3 +1402,7 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 ## v1.84.1
 
 **One Skip button.** When Sol asks you to go over things in a window of its own, each item has a single Skip again. Sol had started adding a Skip of its own next to the window's.
+
+## v1.84.2
+
+**Widgets in your look.** The Current Session, Tasks & Reminders and Pomodoro widgets now use your theme's colours, your clock face for times and the timer, and your text face for everything else. Before, they only took your accent colour. Changing your theme or a face redraws them.

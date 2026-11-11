@@ -1406,3 +1406,7 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 ## v1.84.2
 
 **Widgets in your look.** The Current Session, Tasks & Reminders and Pomodoro widgets now use your theme's colours, your clock face for times and the timer, and your text face for everything else. Before, they only took your accent colour. Changing your theme or a face redraws them.
+
+## v1.84.3
+
+**A greeting on your days.** On your birthday and any day you added under Your Days, a banner waits for you the first time you open your Mac that day, and stays until you close it. Sol says it first in your morning check-in too. Public holidays and other occasions keep to the pill over the clock.

@@ -1375,3 +1375,26 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **The session's name sits closer to the clock.** On Home, the name of what you are doing now moved up toward the time, so the two read as one. The countdown under it moves with it.
 
 **A red that reads as a warning.** In the last five minutes before your next session, the countdown on Home is a true red on dark looks and over your photo, instead of a pink that read as a colour rather than a warning.
+
+## v1.84.0
+
+**Sol checks its own work.** When Sol finishes something on your Mac, a second look reads what you asked and what actually happened, and sends Sol back if part of it is not done. You see one answer, the checked one. While it keeps going, one line says what it has found so far and what it is still looking for.
+
+**Sol keeps looking.** If you name something, Sol takes it that it exists. "Pause my music" means something is playing, and "find my essay" means the essay is there, so Sol tries other places and other ways before telling you anything is missing, and leads with what it found.
+
+**Music and video.** Sol can pause, play and skip what is playing anywhere on your Mac: Spotify, Music, a Chrome tab or another app. Pause never starts anything. Asked to resume a song, put it on repeat or open a video, Sol does it, checks it worked and closes without a word.
+
+**Confirm before anything dangerous.** Before Sol deletes a file, touches system files, disks or security settings, or deletes something on your accounts, it waits for your Touch ID or Mac password. Everything else it just does.
+
+**Read aloud.** Each of Sol's answers in the text chat has a Read button that speaks it in Sol's own voice.
+
+**Sol remembers what it found.** Links, pages and results from earlier in a chat stay with Sol, so a later message can go back to them. Pages it opened are kept whole.
+
+**Pausing for voice mode and alarms.** Opening voice mode or an alarm ringing pauses what is playing with the system's own Pause, and starts again only what it actually stopped. It no longer needs Accessibility for this, and Sol knows what was paused when you opened it.
+
+**Smaller fixes.**
+- Mute in voice mode stays on until you turn it off, even after Sol finishes speaking.
+- A quiet terminal command no longer freezes Meridian, and a crash while Sol worked on your Mac is fixed.
+- The "Sol is using the computer" window can be dragged and stays where you leave it, and Sol's cursor shows for every run.
+- "Search the web and tell me X" searches for X, and Sol no longer searches the web for your own LMS or homework.
+- Deleting a Sol chat also removes it from the chat search index right away.

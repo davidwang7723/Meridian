@@ -1428,3 +1428,21 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Tasks: what is next.** An Up next card counts down to your next session, says which step of which task it is and how far through the task it comes, and starts it in one click. Beside it the tasks, most pressing first, each with its due day, its size, a dash per session and the days left in red or amber when it is close. The row's buttons appear when you point at it, or on a right-click. New task is a pill at the bottom right.
 
 **A round alarm.** Alarms and reminders ring in a glowing disc that says Reminder or Alarm, the time in 24 hours and what it is for, with one big button and the snoozes under it. It sits over everything on screen, full screen apps and the menu bar included.
+
+## v1.85.1
+
+**A morning check-in that knows more.** It now says the time as it is read out, names today's holiday, gives the day's weather with a word when it matters (an umbrella, a coat, water), and tells you when to leave for your first thing, from how long getting there takes (Settings, Time, Mornings).
+
+**Tomorrow's alarm, for tomorrow only.** Set a different wake up time for just the next morning: tell Sol ("wake me at 6:15 tomorrow"), change it on the night check-in, or in Settings, Time, Mornings. The morning after, it is your usual time again.
+
+**Sol designs themes and makes Plans.** Ask for a theme in any colours or mood ("a deep forest at night", "a sunny beach") and Sol makes one and puts it on. Meridian checks every theme the way it will be drawn (writing and the accent readable on the cards and the page, cards a quiet step off the page, nothing vivid where it should be calm) and sends a bad one back to Sol with the reasons, so what you get reads well. Sol can also set up a Plan, work it does on its own every day ("every weekday at 7, check my school inbox and list what is due"), and remove one.
+
+**Morning check-in notes from Sol.** Tell Sol "add to tomorrow's check-in: bring my calculator" and it is said the next morning.
+
+**The night check-in waits for you.** Opening it no longer counts as doing it: closed before Done, the Today's check-in button stays on Home until you finish it or press Not tonight.
+
+**Night review removed.** The overnight review of the next day and its suggestions are gone, with its setting.
+
+**Settings clicks go where you click.** Right after Settings opened, the page rail that was fading out on the left still took clicks, so a click on a Settings page could open Home or another page instead. The rail no longer takes clicks in Settings.
+
+**A calmer alarm.** The ring that kept spreading out from the alarm's edge is gone. The glow around it stays.

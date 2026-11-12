@@ -1410,3 +1410,9 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 ## v1.84.3
 
 **A greeting on your days.** On your birthday and any day you added under Your Days, a banner waits for you the first time you open your Mac that day, and stays until you close it. Sol says it first in your morning check-in too. Public holidays and other occasions keep to the pill over the clock.
+
+## v1.84.4
+
+**Years on your days.** Each of Your Days, and your birthday, can take the year it first happened, picked with Meridian's calendar. The greeting then says which one: Mom and Dad's 30th anniversary, Happy 18th birthday. It is optional; leave the date in this year and there is no number.
+
+**One birthday banner.** On your birthday Meridian showed two banners, the old greeting and the new one. Now it is one, with the line it always had and its Thanks button.

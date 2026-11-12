@@ -1416,3 +1416,15 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Years on your days.** Each of Your Days, and your birthday, can take the year it first happened, picked with Meridian's calendar. The greeting then says which one: Mom and Dad's 30th anniversary, Happy 18th birthday. It is optional; leave the date in this year and there is no number.
 
 **One birthday banner.** On your birthday Meridian showed two banners, the old greeting and the new one. Now it is one, with the line it always had and its Thanks button.
+
+## v1.85.0
+
+**A new look for Settings, with search.** Settings is now a list down the left and open cards in two columns, each with its title inside. A search box over the list finds any setting by name or by what it does ("wallpaper", "birthday", "gmail") and takes you to it, its card ringed. Modules with many rows, like Voice, Notifications and Holidays, take the full width.
+
+**Appearance, on one page.** A live preview of the clock in your face sits beside the display modes and the accent colours. Themes are tiles showing each theme's page, card, accent and text. Every clock face writes the time in itself. App font, font size and the wallpaper open from buttons that name what is chosen.
+
+**Time and Notifications.** Bedtime and waking are large, set in place, over a bar of the day with the night shaded. The time zone shows the city, its region and offset and the time there. Warning time is two tiles that step up and down.
+
+**Tasks: what is next.** An Up next card counts down to your next session, says which step of which task it is and how far through the task it comes, and starts it in one click. Beside it the tasks, most pressing first, each with its due day, its size, a dash per session and the days left in red or amber when it is close. The row's buttons appear when you point at it, or on a right-click. New task is a pill at the bottom right.
+
+**A round alarm.** Alarms and reminders ring in a glowing disc that says Reminder or Alarm, the time in 24 hours and what it is for, with one big button and the snoozes under it. It sits over everything on screen, full screen apps and the menu bar included.

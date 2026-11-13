@@ -1446,3 +1446,23 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Settings clicks go where you click.** Right after Settings opened, the page rail that was fading out on the left still took clicks, so a click on a Settings page could open Home or another page instead. The rail no longer takes clicks in Settings.
 
 **A calmer alarm.** The ring that kept spreading out from the alarm's edge is gone. The glow around it stays.
+
+## v1.86.0
+
+**Sessions inside sessions.** A session can now sit inside another, like a history review inside Study Hall. Making one that overlaps asks first, with what it overlaps, and Add anyway, Save anyway or Move anyway keeps it; Cancel drops it. The inner one is drawn nested in the timeline, the week and the calendar, Home and Up next show the one that started last, and its start alert fires on time. Sol's cards say what a session overlaps too.
+
+**Sessions past midnight.** In the week, drag a session down to the bottom and hold: the day grows into the small hours of the next one, and you keep dragging. Moving and resizing work the same way. A session that ends the next day says so in its editor.
+
+**Sol asks how to plan a task.** Making a task with a due date, Sol (and the typing box) asks whether to spread the work into sessions or do it in one sitting, as late as it fits. That one sitting is what Procrastinate is now: placed in a free spot on your schedule before the deadline instead of a bare start time.
+
+**Tests on the Tasks timeline.** Review sessions and the tests they are for show on the Tasks timeline and in what is coming later.
+
+**Edit a task.** A task's row has an Edit button: its name, due date, how much work it is and notes. Alarms follow the new times without going off as you save.
+
+**Up next, Currently.** The Up next card loses its subtitle, reads Currently while a session is running, and counts Procrastinate sittings.
+
+**Weather on the morning check-in.** The check-in card shows today's weather: the sky, the temperature now, the high and low, and the chance of rain when it is likely. The weather is fetched before Sol writes, so it is in what is said even right after a dark wake.
+
+**No stale check-ins.** A morning check-in left on screen while the Mac was asleep or locked is taken down if the Mac is first opened after noon.
+
+**A softer alarm glow.** The glow around the alarm no longer stops at a square edge.

@@ -1466,3 +1466,9 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **No stale check-ins.** A morning check-in left on screen while the Mac was asleep or locked is taken down if the Mac is first opened after noon.
 
 **A softer alarm glow.** The glow around the alarm no longer stops at a square edge.
+
+## v1.86.1
+
+**MCP servers keep their tools.** A server edited in Settings (its name, command, address or token) now reconnects with the new settings. Before, it kept the old connection, and a renamed server showed as connected to Sol with no tools at all. A server that downloads itself the first time it starts (npx, uvx) gets two minutes for that instead of 20 seconds, and two connections are no longer started at once.
+
+**Next up clear of the Dock.** With Meridian as your wallpaper, the Next up bar sits above the Dock, or beside it when the Dock is on the left, including a Dock that hides itself, so it is never covered.

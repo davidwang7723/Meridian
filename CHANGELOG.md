@@ -1472,3 +1472,11 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **MCP servers keep their tools.** A server edited in Settings (its name, command, address or token) now reconnects with the new settings. Before, it kept the old connection, and a renamed server showed as connected to Sol with no tools at all. A server that downloads itself the first time it starts (npx, uvx) gets two minutes for that instead of 20 seconds, and two connections are no longer started at once.
 
 **Next up clear of the Dock.** With Meridian as your wallpaper, the Next up bar sits above the Dock, or beside it when the Dock is on the left, including a Dock that hides itself, so it is never covered.
+
+## v1.86.2
+
+**Plans you see before they happen.** In the planning window, a test now shows on the timeline beside the chat before you confirm it: each review session on its own day, and the test itself. Homework shows its work sessions and when it is due.
+
+**Sol's own planning always asks.** With Sol set to make changes without asking, the planning window, an ask window row Sol answers, and a plan that runs on its own still wait for your Confirm. Before, they were made at once: nothing showed beside the chat, and a plan's changes were made with nobody there.
+
+**No test added twice.** Done planning made the test you had already seen on its card a second time. The cards are now made first and Sol is told not to send them again, and the same test on the same day is never added twice.

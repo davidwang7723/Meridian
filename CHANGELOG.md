@@ -1480,3 +1480,31 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Sol's own planning always asks.** With Sol set to make changes without asking, the planning window, an ask window row Sol answers, and a plan that runs on its own still wait for your Confirm. Before, they were made at once: nothing showed beside the chat, and a plan's changes were made with nobody there.
 
 **No test added twice.** Done planning made the test you had already seen on its card a second time. The cards are now made first and Sol is told not to send them again, and the same test on the same day is never added twice.
+
+## v1.87.0
+
+**A checklist, everywhere you look.** Today's checklist sits on the right half of the menu bar card, and a Checklist button on Home opens the same list in a window, so a tick in one is a tick in the other. Type a line, press Return, tick it off. Anything not ticked carries over to the next day. Right-click an item to put it under a class: each class's items sit together in a frame of that class's colour, below the items that belong to no class. Sol reads it, adds to it and ticks things off.
+
+**Look ats became the checklist.** The Look ats page, and the Look at choice when adding something, are gone. Every open look at moved into the checklist under its class.
+
+**Review time counted as it really went.** Each review session for an assessment is counted as you kept it: moved, cut short or stretched by hand, and corrected by your answer to How was the time. A session that happened stays counted after you delete it, Didn't do it counts nothing, and closing the card records nothing. The question after the assessment asks about the reviewing you really did.
+
+**Deleting one session of a task no longer finishes the task.** One still ahead is taken out of the plan, and one that happened stays done.
+
+**Link a session to an assessment.** A new or edited session can be marked as review for an assessment that is coming up, and counts toward it.
+
+**Sessions inside sessions, always.** When two sessions overlap in the week, the shorter one is drawn inside the longer one, even when it starts a minute before it or runs past its end. They are never squeezed side by side.
+
+**Drag up as well as down.** Moving or drawing a session in the week scrolls the view up when you hold it at the top edge, as it already did at the bottom.
+
+**Procrastinate is gone.** Tasks are no longer planned as one sitting at the last moment. A task over the length set in Settings, Tasks gets its work spread into sessions; a smaller one keeps its reminders before it is due. Sol and the typing box no longer ask which.
+
+**Sol edits your themes.** Ask Sol to change a theme you have, built-in ones included, and its card says Edit theme. A new theme that would look almost the same as one you have is not made. Your requests for bold or vivid colours are followed.
+
+**Delete any theme but Bright and Onyx.** The built-in themes can now be edited and deleted like your own.
+
+**Move Next up on the wallpaper.** Hold Command over Next up on your desktop and drag it where you want it. It stays there.
+
+**A plan marketplace.** Settings, AI, Plans has a Marketplace: browse plans other people made and get one, or share your own, one a day. A plan you get arrives switched off and opens for you to read first, and steps that use an MCP server you do not have show in red until you pick your own.
+
+**Smaller fixes.** The Set buttons for Dynamic display mode keep their label in a narrow card. The menu bar card has rounded corners all the way out. Sol's results show icons, never emoji, in every window.

@@ -1508,3 +1508,43 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **A plan marketplace.** Settings, AI, Plans has a Marketplace: browse plans other people made and get one, or share your own, one a day. A plan you get arrives switched off and opens for you to read first, and steps that use an MCP server you do not have show in red until you pick your own.
 
 **Smaller fixes.** The Set buttons for Dynamic display mode keep their label in a narrow card. The menu bar card has rounded corners all the way out. Sol's results show icons, never emoji, in every window.
+
+## v1.88.0
+
+**Holidays, dressed for real.** Every built-in holiday got new art, drawn and rendered to look like the real thing: lilies with painted eggs for Easter, the turning Earth behind the clock for Earth Day (from NASA's Blue Marble map), a poppy, chrysanthemums, a hand-tied bouquet, a pomegranate and honey table, Purim masks, a sukkah roof, the groundhog coming up out of its burrow, the three kings on camels, a pot of gold under the rainbow, falling hearts, and a dragon boat race on a river with every crew member rowing. Qixi has a Milky Way, Vega and Altair pulsing, and Zhi Nu and Niu Lang walking across the magpie bridge to meet.
+
+**Thanksgiving.** A harvest in both bottom corners, a cornucopia on one side and pumpkins with a sheaf of wheat on the other, maple and oak leaves tumbling down Home, a warm theme of its own, and Pie Catch, a game you open from the Thanksgiving pill.
+
+**Your wallpaper, lock screen and screen saver dress up too.** When your desktop is Meridian's (its colour, or a picture you chose in Meridian), a holiday you keep takes it over for the day: the desktop page wears the holiday, the lock screen shows a still of it caught at its best moment, and the screen saver plays it moving, Santa and fireworks included. Afterwards your own picture comes back. A Mac wallpaper of your own is never touched; the holiday stays inside Meridian.
+
+**Holiday games.** A holiday can bring a game that fills Meridian's window, with Exit to come back. It opens from the holiday pill, which wiggles until you have tried it, or from a button of its own on Home. New holidays, art and games arrive by themselves, without an update.
+
+**Good morning, and happy holidays.** The morning check-in ends with the day's greeting on a holiday you keep, Merry Christmas or Happy Thanksgiving, and never on a day of remembrance. If the holiday has a game you have not opened, it tells you where to find it. When Gmail cannot be reached right after the Mac wakes, it reads you the inbox Meridian already has instead of saying it could not.
+
+**News your way.** Choose the news you hear in the morning check-in and from Sol: top stories, or any mix of world, your country, business, technology, science, health, sports and entertainment. In first setup and in Settings, AI.
+
+**Sol does things only in a chat.** Sol uses Chrome and your screen only in a chat you are in, never for the morning check-in or anything else in the background. A plan runs at its time or up to half an hour after, never hours later.
+
+**A holiday is one switch.** On a holiday you keep, Settings, Appearance opens with the holiday's name and a switch. On, Meridian wears the holiday's theme and its decorations together, and the theme, accent, Dynamic hours and wallpaper wait behind it. Off, all of it is yours again until next time. A holiday is no longer a tile among the themes.
+
+**Only the holidays you keep.** A holiday from a calendar you have not switched on draws nothing. Religious holidays outside the Christian and Jewish calendars show their name and nothing more. New calendars: Mexico, Hindu and Persian, with Diwali, Holi and Ramadan.
+
+**Your own look, simpler.** Bright and Onyx are one Default theme in an accent of your own, chosen in first setup. The accent colours only the text of the page you are on in the sidebar, never the pill. Ember is retired; anyone using it keeps it as a theme of their own.
+
+**First setup, fixed.** Continue no longer quits on the permissions page. Full screen works when you say Sure. Every model is listed for the coding agents, Back sits where Skip was, Skip moved to the top right, and the last page points to the suggestion box. A new page offers Meridian as your wallpaper: drop in your current wallpaper photo and your Mac and Meridian show the same picture, which you can change any time in Settings, Appearance.
+
+**A clock that reads on any wallpaper.** The clock's shadow is measured again every time the wallpaper changes, a light and dark or time of day Mac wallpaper included, and on a white picture the clock turns black.
+
+**Smoother.** Holiday animations run at 40 frames a second, art is ready before it shows so nothing blinks in, fireworks cost about a third less and never go off over a bright page, and Santa no longer vanishes mid-flight.
+
+**Small things.** The sleep bar runs noon to noon, so a night is one block, with marks at 6 PM, midnight and 6 AM. The Settings sidebar buttons have frames. The holiday pill reads clearly on bright themes. The day's pill names the holiday Home is dressed for when two fall on one day.
+
+**Plans run out of sight.** A plan that needs Sol runs without opening a chat.
+
+**Updates at midnight.** The 12 AM check also brings new holiday art and language packs, and an update keeps Meridian's icon in your Dock. Switching a holiday calendar on or off fetches its art right away.
+
+**Move the wallpaper's pieces.** A short hint shows that Command and drag moves the weather and Next up on your desktop.
+
+**Places in your language.** Time zones show their city in the language Meridian is in, from the Mac's own place names, and search finds them in either language. Alarm tones, the Canada and Australia calendars, the Pomodoro line in the menu bar and a few other words that stayed in English are translated now.
+
+**Signed language packs.** A downloaded language is installed only when it carries Meridian's signature.

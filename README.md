@@ -139,3 +139,7 @@ Thirty two languages: seven built in (English, Simplified Chinese, Hindi, Spanis
 - Built to sit open all day at the energy cost of an idle app.
 - Updates download and install from Settings, with notes on what changed.
 - A suggestion box in Settings sends ideas straight to the developer.
+
+### Credits
+
+The Earth behind the clock on Earth Day is drawn from NASA's Blue Marble imagery (NASA Visible Earth).

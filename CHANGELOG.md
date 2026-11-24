@@ -1548,3 +1548,11 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Places in your language.** Time zones show their city in the language Meridian is in, from the Mac's own place names, and search finds them in either language. Alarm tones, the Canada and Australia calendars, the Pomodoro line in the menu bar and a few other words that stayed in English are translated now.
 
 **Signed language packs.** A downloaded language is installed only when it carries Meridian's signature.
+
+## v1.88.1
+
+**Each alarm sounds its own way.** How loud an alarm rings is now set on the alarm itself, wherever you make or edit it: a reminder, a task, a block on your schedule, the Pomodoro, bedtime and the wake up alarm. For headphones and for the Mac's speakers on their own, choose whether it makes a sound, whether it pauses what is playing, and whether it raises the volume and how far, then hear it with Test play or the whole thing with Test Alarm. A new alarm starts from the last one you set up. The alarm tone itself stays one choice in Settings, Notifications.
+
+**Sol asks how it should ring.** Adding something that rings as an alarm, Sol asks how loud it should be on speakers and on headphones, unless you already said, and the card you confirm shows it. Sol can change just the sound of one you already have.
+
+**Lighter on your battery.** Holiday animations cost much less energy: the star of Bethlehem, falling Pi digits, fireworks, the magpie bridge and Qixi's stars are drawn far more cheaply, and the desktop's animations rest while windows cover it completely. They still run at 40 frames a second.

@@ -1556,3 +1556,11 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Sol asks how it should ring.** Adding something that rings as an alarm, Sol asks how loud it should be on speakers and on headphones, unless you already said, and the card you confirm shows it. Sol can change just the sound of one you already have.
 
 **Lighter on your battery.** Holiday animations cost much less energy: the star of Bethlehem, falling Pi digits, fireworks, the magpie bridge and Qixi's stars are drawn far more cheaply, and the desktop's animations rest while windows cover it completely. They still run at 40 frames a second.
+
+## v1.88.2
+
+**Plans stop asking twice.** A Plan's window no longer asks about something you already went over. Close or skip a test or homework and it comes back once, at the Plan's next run, in case you only put it off; close it again and it is gone for good. Anything you did, a test that is over or already has review sessions planned, and work already added as a task are never asked about. A run no longer opens the same window twice a minute apart. A changed date brings a thing back as news.
+
+**Code you can copy.** Code Sol writes stays in its box once the reply is finished, with a button to copy it.
+
+**A quieter new chat.** A new chat with Sol opens with the Sol mark and a greeting for the time of day, without example prompts.

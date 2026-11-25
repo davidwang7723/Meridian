@@ -1574,3 +1574,7 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Halloween in the holiday list.** October 31 is named, with no decorations and no greeting.
 
 **Small things.** A holiday whose game changes wiggles again for people who opened the old one. Older Meridians keep the previous Thanksgiving pack instead of losing it.
+
+## v1.88.4
+
+**The Thanksgiving pill works.** On Thanksgiving the pill above the clock now wiggles and opens the card maker in every Home layout, including the clock that matches your desktop, where it used to be only a label. A holiday pack that arrives while Meridian is open, at midnight or just after launch, now shows at once instead of after a restart.

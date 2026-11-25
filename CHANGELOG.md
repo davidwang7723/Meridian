@@ -1564,3 +1564,13 @@ Version history. For an overview of what the app is, see [whatismeridian.md](wha
 **Code you can copy.** Code Sol writes stays in its box once the reply is finished, with a button to copy it.
 
 **A quieter new chat.** A new chat with Sol opens with the Sol mark and a greeting for the time of day, without example prompts.
+
+## v1.88.3
+
+**Make a Thanksgiving card.** On Thanksgiving, the wiggling Thanksgiving pill opens a card maker. Pick Harvest or Candlelight, both animated, open the card, write to someone, sign it and record a voice message of up to a minute. Send card gives you a link to text or AirDrop. It opens on any phone or computer, folds open like a real card, plays your message, and shows Thank You in your language. Cards are kept for 60 days, then deleted. In the Thanksgiving morning check-in, Sol reminds you the card is there.
+
+**Meridian Connect.** Holiday packs can now record a voice message through Meridian, store things and share them by private link, and meet in live rooms, through Meridian's own server. Only Meridian's signed holiday packs can use it.
+
+**Halloween in the holiday list.** October 31 is named, with no decorations and no greeting.
+
+**Small things.** A holiday whose game changes wiggles again for people who opened the old one. Older Meridians keep the previous Thanksgiving pack instead of losing it.
